@@ -1,9 +1,9 @@
-import { View, StyleSheet, Text } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { COLORS } from "../constants/colors.js"; 
-export default function Container({children})
+export default function Container({children, style})
 {
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, style]}>
             {children}
             {/* musi byc prop, tresc wsadzona do kontenera bedzie w tym miejscu */}
         </View>
@@ -12,8 +12,7 @@ export default function Container({children})
 
 const styles = StyleSheet.create({
     container: {
-        flexDirection: "row",
-        marginVertical: 10,
+        marginBottom: 10,
         paddingVertical: 10,
         backgroundColor: COLORS.containerColor
 

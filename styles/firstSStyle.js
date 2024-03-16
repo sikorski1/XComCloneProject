@@ -44,6 +44,19 @@ export const styles = StyleSheet.create({
     boxTwoQRIcon: {
         marginLeft: "auto",
         marginRight: 15,
+    },
+
+    //boxThree
+
+    boxThree: {
+        marginTop: 25
+    },
+
+    boxThreeImg: {
+        marginHorizontal: 5,
+        width: 320,
+        height: 160,
+        borderRadius: 2
     }
 
 })

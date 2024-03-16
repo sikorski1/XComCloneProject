@@ -11,6 +11,8 @@ export const styles = StyleSheet.create({
     },
     boxOneText: {
         fontSize:15,
+        
     }
+
 
 })

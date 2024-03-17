@@ -13,7 +13,6 @@ export default function Container({ children, style }) {
 const styles = StyleSheet.create({
     container: {
         marginBottom: 10,
-        paddingVertical: 10,
         backgroundColor: COLORS.containerColor
 
     }

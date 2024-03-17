@@ -5,7 +5,7 @@ import { styles } from "../styles/firstSStyle.js"
 import Container from "../components/Container.js"
 import SeeAll from "../components/SeeAll.js"
 import Finder from "../components/Finder.js"
-import { useFonts } from 'expo-font';
+import { useFonts} from 'expo-font';
 import { DATA } from "../constants/DATA.js"
 import * as SplashScreen from 'expo-splash-screen';
 import { Item, getItem, getItemCount } from "../components/Item.js"

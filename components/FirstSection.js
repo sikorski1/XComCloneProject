@@ -1,11 +1,15 @@
-import { View, Text, TextInput, FlatList, Image } from "react-native"
+import { View, Text, TextInput, FlatList, Image, Dimensions } from "react-native"
 import { useState } from "react"
 import { ICONS } from "../constants/icons.js"
+import { SIZES } from "../constants/sizes.js"
 import { styles } from "../styles/firstSStyle.js"
 import bannerList from "../data/firstSData.json"
 import Container from "./Container.js"
 export default function FirstSection()
 {
+
+    const CARD_WIDTH_SPACING = Dimensions.get("window").width*0.85+SIZES.spacing;
+
     const [text, setText] = useState('');
     return (
         <Container>
@@ -25,18 +29,26 @@ export default function FirstSection()
                     <Text style={styles.boxTwoQRIcon}>{ICONS.barcodeIcon} {bannerList.id}</Text>
                 </View>
             </View>
-
-            <FlatList style={styles.boxThree}
-                data={bannerList}
-                renderItem={({ item }) =>
-                {
-                    return (
-                        <Image style={styles.boxThreeImg} source={{ uri: item.img }} key={item.id}
-                        />
-                    )
-                }}
-                horizontal />
-
+            <View style={styles.boxThree}>
+                <FlatList
+                    data={bannerList}
+                    showsHorizontalScrollIndicator={false}
+                    snapToInterval={CARD_WIDTH_SPACING}
+                    decelerationRate="fast"
+                    horizontal
+                    renderItem={({ item, index }) =>
+                    {
+                        return (
+                            <View key={item.id}
+                                style={[styles.boxThreeImgContainer,
+                                { marginLeft: index === 0 ? 15 : 10, marginRight: index === bannerList.length - 1 ? 15 : 0 }
+                                ]}>
+                                <Image style={styles.boxThreeImg} source={{ uri: item.img }}/>
+                            </View>
+                        )
+                    }}
+                />
+            </View>
         </Container>
 
     )

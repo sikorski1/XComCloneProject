@@ -5,5 +5,5 @@ import MaterialCommutnityIcons from "react-native-vector-icons/MaterialCommunity
 export const ICONS = {
     bellIcon: <FontAwesome name={"bell-o"} size={18}></FontAwesome>,
     magnifierIcon: <SimpleLineIcons name= {"magnifier"}></SimpleLineIcons>,
-    barcodeIcon: <MaterialCommutnityIcons name= {"barcode-scan"}></MaterialCommutnityIcons>
+    barcodeIcon: <MaterialCommutnityIcons name= {"barcode-scan"} size={15}></MaterialCommutnityIcons>
 }

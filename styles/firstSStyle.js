@@ -1,15 +1,14 @@
 import { StyleSheet } from "react-native";
 import { COLORS } from "../constants/colors.js";
 import { FONTS } from "../constants/fonts.js"
-
-
+import { SIZES } from "../constants/sizes.js"
 export const styles = StyleSheet.create({
     //boxOne
     boxOne: {
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        marginHorizontal: 20,
+        marginHorizontal: SIZES.margBig,
         marginVertical: 25,
     },
 
@@ -24,6 +23,7 @@ export const styles = StyleSheet.create({
     },
 
     boxTwoContainer: {
+        paddingVertical: 3,
         flexDirection: "row",
         alignItems: "center",
         width: "90%",
@@ -49,14 +49,29 @@ export const styles = StyleSheet.create({
     //boxThree
 
     boxThree: {
-        marginTop: 25
+        marginTop: 25,
+    },
+
+    boxThreeImgContainer: {
+        marginLeft: SIZES.spacing,
+        width: SIZES.width * 0.85,
+        height: 180,
+        borderRadius: 3,
+        shadowColor: COLORS.black,
+        shadowRadius: 4,
+        shadowOpacity: 0.1,
+        shadowOffset: {
+            width:0,
+            height:2
+        },
+        elevation:3,
+        overflow: "hidden"
+        
     },
 
     boxThreeImg: {
-        marginHorizontal: 5,
-        width: 320,
-        height: 160,
-        borderRadius: 2
+        width: SIZES.width * 0.9,
+        height: 180,
     }
 
 })

@@ -17,6 +17,7 @@ export default function MainPage() {
     const [fontsLoaded, fontError] = useFonts({
         'Lato-Light': require('../../assets/fonts/Lato-Light.ttf'),
         'Lato-Regular': require('../../assets/fonts/Lato-Regular.ttf'),
+        'JetBrainsMono-Regular': require("../../assets/fonts/JetBrainsMono-Regular.ttf"),
     });
 
     const onLayoutRootView = useCallback(async () => {
@@ -28,8 +29,6 @@ export default function MainPage() {
     if (!fontsLoaded && !fontError) {
         return null;
     }
-
-    const [text, setText] = useState('');
 
     return (
         <SafeAreaView style={styles.container} onLayout={onLayoutRootView}>
@@ -44,6 +43,7 @@ export default function MainPage() {
                     <SeeAll text="Wszystkie promocje" />
                 </Container>
                 <Container>
+                    <View style={styles.underlineBottom}></View>
                     <View style={styles.boxFour}>
                         <VirtualizedList
                             data={DATA}

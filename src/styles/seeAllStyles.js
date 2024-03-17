@@ -12,6 +12,14 @@ export const seeAllStyles = StyleSheet.create({
         backgroundColor: COLORS.borderColor,
     },
 
+    underlineBottom: {
+        marginTop: SIZES.margBig / 2,
+        alignSelf: "center",
+        height: 1,
+        width: SIZES.width,
+        backgroundColor: COLORS.borderColor,
+    },
+
     textBox: {
         marginTop: SIZES.margBig / 2,
         marginHorizontal: SIZES.width * 0.05,

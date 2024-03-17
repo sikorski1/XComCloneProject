@@ -43,6 +43,7 @@ export default function MainPage() {
                     <SeeAll text="Wszystkie promocje" />
                 </Container>
                 <Container>
+                    <View style={styles.underlineBottom}></View>
                     <View style={styles.boxFour}>
                         <VirtualizedList
                             data={DATA}

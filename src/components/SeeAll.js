@@ -11,6 +11,7 @@ export default function ({ text }) {
                 <Text style={seeAllStyles.text}>{text}</Text>
                 <Text style={seeAllStyles.icon}>{ICONS.rightArrowIcon}</Text>
             </View>
+            <View style={seeAllStyles.underlineBottom}></View>
         </>
     )
 }

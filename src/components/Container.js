@@ -12,8 +12,8 @@ export default function Container({ children, style }) {
 
 const styles = StyleSheet.create({
     container: {
-        marginBottom: 10,
-        paddingVertical: 10,
+        marginBottom: 20,
+        paddingVertical: 0,
         backgroundColor: COLORS.containerColor,
     }
 })

@@ -32,6 +32,7 @@ export const styles = StyleSheet.create({
         borderWidth: 1,
         borderRadius: 15,
         fontFamily: 'JetBrainsMono-Regular',
+        marginBottom: 16,
     },
 
     boxTwoLoupIcon: {
@@ -78,7 +79,7 @@ export const styles = StyleSheet.create({
     },
 
     boxFour: {
-        marginTop: 4,
+        marginTop: 12,
         marginLeft: 12,
     },
 
@@ -119,6 +120,12 @@ export const styles = StyleSheet.create({
         marginTop: 4,
         flex: 1,
         marginTop: StatusBar.currentHeight,
+    },
+    underlineBottom: {
+        alignSelf: "center",
+        height: 1,
+        width: SIZES.width,
+        backgroundColor: COLORS.borderColor,
     },
 },
 )

@@ -1,7 +1,6 @@
 import { StyleSheet } from "react-native";
 import { COLORS } from "../constants/colors.js";
-import { FONTS } from "../constants/fonts.js"
-import { SIZES } from "../constants/sizes.js"
+import { SIZES } from "../constants/sizes.js";
 
 export const styles = StyleSheet.create({
     //boxOne

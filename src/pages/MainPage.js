@@ -3,33 +3,22 @@ import { useState } from "react"
 import { ICONS } from "../constants/icons.js"
 import { SIZES } from "../constants/sizes.js"
 import { styles } from "../styles/firstSStyle.js"
-import bannerList from "../data/firstSData.json"
-import Container from "./Container.js"
-import SeeAll from "./SeeAll.js"
+import bannerList from "../../data/firstSData.json"
+import Container from "../components/Container.js"
+import SeeAll from "../components/SeeAll.js"
+import Finder from "../components/Finder.js"
 
-export default function FirstSection() {
+export default function MainPage() {
 
     const CARD_WIDTH_SPACING = Dimensions.get("window").width * 0.85 + SIZES.spacing;
 
-    const [text, setText] = useState('');
     return (
         <Container>
             <View style={styles.boxOne}>
                 <Text style={styles.boxOneText}>Dzień dobry</Text>
                 <Text>{ICONS.bellIcon}</Text>
             </View>
-
-            <View style={styles.boxTwo}>
-                <View style={styles.boxTwoContainer}>
-                    <Text style={styles.boxTwoLoupIcon}>{ICONS.magnifierIcon}</Text>
-                    <TextInput style={styles.boxTwoInput}
-                        placeholder="Czego szukasz?"
-                        onChangeText={setText}
-                        value={text}
-                    />
-                    <Text style={styles.boxTwoQRIcon}>{ICONS.barcodeIcon}</Text>
-                </View>
-            </View>
+            <Finder />
             <View style={styles.boxThree}>
                 <FlatList
                     data={bannerList}

@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 import { COLORS } from "../constants/colors.js";
 import { FONTS } from "../constants/fonts.js"
 import { SIZES } from "../constants/sizes.js"
+
 export const styles = StyleSheet.create({
     //boxOne
     boxOne: {
@@ -61,12 +62,12 @@ export const styles = StyleSheet.create({
         shadowRadius: 4,
         shadowOpacity: 0.1,
         shadowOffset: {
-            width:0,
-            height:2
+            width: 0,
+            height: 2
         },
-        elevation:3,
+        elevation: 3,
         overflow: "hidden"
-        
+
     },
 
     boxThreeImg: {

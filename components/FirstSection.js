@@ -6,10 +6,10 @@ import { styles } from "../styles/firstSStyle.js"
 import bannerList from "../data/firstSData.json"
 import Container from "./Container.js"
 import SeeAll from "./SeeAll.js"
-export default function FirstSection()
-{
 
-    const CARD_WIDTH_SPACING = Dimensions.get("window").width*0.85+SIZES.spacing;
+export default function FirstSection() {
+
+    const CARD_WIDTH_SPACING = Dimensions.get("window").width * 0.85 + SIZES.spacing;
 
     const [text, setText] = useState('');
     return (
@@ -37,20 +37,19 @@ export default function FirstSection()
                     snapToInterval={CARD_WIDTH_SPACING}
                     decelerationRate="fast"
                     horizontal
-                    renderItem={({ item, index }) =>
-                    {
+                    renderItem={({ item, index }) => {
                         return (
                             <View key={item.id}
                                 style={[styles.boxThreeImgContainer,
                                 { marginLeft: index === 0 ? 15 : 10, marginRight: index === bannerList.length - 1 ? 15 : 0 }
                                 ]}>
-                                <Image style={styles.boxThreeImg} source={{ uri: item.img }}/>
+                                <Image style={styles.boxThreeImg} source={{ uri: item.img }} />
                             </View>
                         )
                     }}
                 />
             </View>
-            <SeeAll text="Wszystkie promocje"/>
+            <SeeAll text="Wszystkie promocje" />
         </Container>
 
     )

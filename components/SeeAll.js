@@ -2,8 +2,8 @@ import { StyleSheet, View, Text } from "react-native";
 import { ICONS } from "../constants/icons"
 import { SIZES } from "../constants/sizes";
 import { COLORS } from "../constants/colors";
-export default function ({ text })
-{
+
+export default function ({ text }) {
     return (
         <>
             <View style={styles.underline}></View>
@@ -29,11 +29,11 @@ const styles = StyleSheet.create({
         marginTop: SIZES.margBig / 2,
         marginHorizontal: SIZES.width * 0.05,
         flexDirection: "row",
-        alignItems:"center",
+        alignItems: "center",
     },
 
     icon: {
         marginLeft: "auto",
-        marginBottom:3
+        marginBottom: 3
     }
 })

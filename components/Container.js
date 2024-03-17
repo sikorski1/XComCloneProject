@@ -1,7 +1,7 @@
 import { View, StyleSheet } from "react-native";
-import { COLORS } from "../constants/colors.js"; 
-export default function Container({children, style})
-{
+import { COLORS } from "../constants/colors.js";
+
+export default function Container({ children, style }) {
     return (
         <View style={[styles.container, style]}>
             {children}

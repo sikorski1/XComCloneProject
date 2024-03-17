@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
 
     boxOneText: {
         fontSize: 20,
-        fontFamily: 'Lato-Regular',
+        fontFamily: 'JetBrainsMono-Regular',
     },
 
     //boxTwo
@@ -31,7 +31,7 @@ export const styles = StyleSheet.create({
         borderColor: COLORS.borderColor,
         borderWidth: 1,
         borderRadius: 15,
-        fontFamily: 'Lato-Regular',
+        fontFamily: 'JetBrainsMono-Regular',
     },
 
     boxTwoLoupIcon: {
@@ -40,7 +40,8 @@ export const styles = StyleSheet.create({
 
     boxTwoInput: {
         marginHorizontal: 5,
-        flex: 1
+        flex: 1,
+        fontFamily: 'JetBrainsMono-Regular',
     },
 
     boxTwoQRIcon: {
@@ -77,7 +78,8 @@ export const styles = StyleSheet.create({
     },
 
     boxFour: {
-        marginTop: 8,
+        marginTop: 4,
+        marginLeft: 12,
     },
 
     item: {
@@ -100,17 +102,18 @@ export const styles = StyleSheet.create({
         borderRadius: 4,
     },
     image: {
-        width: 60,
-        height: 60,
+        width: 50,
+        height: 50,
         marginBottom: 6,
         marginTop: 6,
         justifyContent: 'center',
     },
     title: {
+        marginTop: 6,
         fontSize: 12,
         textAlign: 'center',
         overflow: 'hidden',
-        fontFamily: 'Lato-Regular',
+        fontFamily: 'JetBrainsMono-Regular',
     },
     container: {
         marginTop: 4,

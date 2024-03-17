@@ -18,7 +18,7 @@ export const getItemCount = () => DATA.length;
 
 export const Item = ({ title, imageUri }) => (
     <View style={styles.item}>
-        <Text numberOfLines={1} ellipsizeMode="tail" style={styles.title}>{title}</Text>
+        <Text numberOfLines={2} ellipsizeMode="tail" style={styles.title}>{title}</Text>
         <Image source={imageUri} style={styles.image} />
     </View>
 );

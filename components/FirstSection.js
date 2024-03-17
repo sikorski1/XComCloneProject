@@ -5,6 +5,7 @@ import { SIZES } from "../constants/sizes.js"
 import { styles } from "../styles/firstSStyle.js"
 import bannerList from "../data/firstSData.json"
 import Container from "./Container.js"
+import SeeAll from "./SeeAll.js"
 export default function FirstSection()
 {
 
@@ -26,7 +27,7 @@ export default function FirstSection()
                         onChangeText={setText}
                         value={text}
                     />
-                    <Text style={styles.boxTwoQRIcon}>{ICONS.barcodeIcon} {bannerList.id}</Text>
+                    <Text style={styles.boxTwoQRIcon}>{ICONS.barcodeIcon}</Text>
                 </View>
             </View>
             <View style={styles.boxThree}>
@@ -49,6 +50,7 @@ export default function FirstSection()
                     }}
                 />
             </View>
+            <SeeAll text="Wszystkie promocje"/>
         </Container>
 
     )

@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet, StatusBar } from "react-native";
 import { COLORS } from "../constants/colors.js";
 import { SIZES } from "../constants/sizes.js";
 
@@ -13,13 +13,14 @@ export const styles = StyleSheet.create({
     },
 
     boxOneText: {
-        fontSize: 20
+        fontSize: 20,
+        fontFamily: 'Lato-Regular',
     },
 
     //boxTwo
     boxTwo: {
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
     },
 
     boxTwoContainer: {
@@ -29,7 +30,8 @@ export const styles = StyleSheet.create({
         width: "90%",
         borderColor: COLORS.borderColor,
         borderWidth: 1,
-        borderRadius: 15
+        borderRadius: 15,
+        fontFamily: 'Lato-Regular',
     },
 
     boxTwoLoupIcon: {
@@ -65,13 +67,55 @@ export const styles = StyleSheet.create({
             height: 2
         },
         elevation: 3,
-        overflow: "hidden"
+        overflow: "hidden",
 
     },
 
     boxThreeImg: {
         width: SIZES.width * 0.9,
         height: 180,
-    }
+    },
 
-})
+    boxFour: {
+        marginTop: 8,
+    },
+
+    item: {
+        width: 100,
+        backgroundColor: COLORS.containerColor,
+        height: 100,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginVertical: 4,
+        marginHorizontal: 4,
+        borderRadius: 4,
+        padding: 6,
+        borderWidth: 1,
+        borderColor: COLORS.borderColor,
+        shadowRadius: 4,
+        shadowOpacity: 50,
+        shadowColor: COLORS.black,
+        shadowOffset: 4,
+        elevation: 4, // Shadow depth
+        borderRadius: 4,
+    },
+    image: {
+        width: 60,
+        height: 60,
+        marginBottom: 6,
+        marginTop: 6,
+        justifyContent: 'center',
+    },
+    title: {
+        fontSize: 12,
+        textAlign: 'center',
+        overflow: 'hidden',
+        fontFamily: 'Lato-Regular',
+    },
+    container: {
+        marginTop: 4,
+        flex: 1,
+        marginTop: StatusBar.currentHeight,
+    },
+},
+)

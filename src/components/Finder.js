@@ -18,7 +18,6 @@ export default function Finder() {
                     <Text style={styles.boxTwoQRIcon}>{ICONS.barcodeIcon}</Text>
                 </View>
             </View>
-            <View style={styles.underlineBottom}></View>
         </>
     );
 

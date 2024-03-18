@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
     },
 
     textBox: {
-        paddingVertical: SIZES.margBig / 2,
+        paddingVertical: SIZES.margBig / 2+3,
         paddingHorizontal: SIZES.width * 0.05,
         flexDirection: "row",
         alignItems: "center",

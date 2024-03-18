@@ -13,7 +13,7 @@ export const styles = StyleSheet.create({
     },
 
     boxOneText: {
-        fontSize: 20,
+        fontSize: SIZES.fontBig,
         fontFamily: 'JetBrainsMono-Regular',
     },
 
@@ -121,11 +121,4 @@ export const styles = StyleSheet.create({
         flex: 1,
         marginTop: StatusBar.currentHeight,
     },
-    underlineBottom: {
-        alignSelf: "center",
-        height: 1,
-        width: SIZES.width,
-        backgroundColor: COLORS.borderColor,
-    },
-},
-)
+})

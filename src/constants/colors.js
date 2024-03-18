@@ -4,5 +4,6 @@ export const COLORS = {
     containerColor: "#ffffff",
     textColor: "#444444",
     borderColor: "#dddddd",
-    black: "#000"
+    black: "#000",
+    shadowLight: "rgba(0, 0, 0, 0.3)"
 }

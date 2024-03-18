@@ -10,6 +10,7 @@ import { DATA } from "../constants/DATA.js"
 import * as SplashScreen from 'expo-splash-screen';
 import { Item, getItem, getItemCount } from "../components/Item.js"
 import BannerList from "../components/BannerList.js"
+import HotShot from "../components/HotShot.js"
 
 
 export default function MainPage() {
@@ -30,12 +31,19 @@ export default function MainPage() {
         return null;
     }
 
+    const getCurrentTimeInPoland = () => {
+        const currentTime = new Date();
+        currentTime.toLocaleString('pl-PL', { timeZone: 'Europe/Warsaw' });
+        const hours = currentTime.getHours();
+        return `${hours}`;
+      };
+
     return (
         <SafeAreaView style={styles.container} onLayout={onLayoutRootView}>
             <ScrollView>
                 <Container onLayout={onLayoutRootView}>
                     <View style={styles.boxOne}>
-                        <Text style={styles.boxOneText}>Dzień dobry</Text>
+                        <Text style={styles.boxOneText}>{4<=getCurrentTimeInPoland() && getCurrentTimeInPoland()<=18 ? "Dzień Dobry": "Dobry Wieczór"}</Text>
                         <Text>{ICONS.bellIcon}</Text>
                     </View>
                     <Finder />
@@ -43,7 +51,6 @@ export default function MainPage() {
                     <SeeAll text="Wszystkie promocje" />
                 </Container>
                 <Container>
-                    <View style={styles.underlineBottom}></View>
                     <View style={styles.boxFour}>
                         <VirtualizedList
                             data={DATA}
@@ -55,7 +62,10 @@ export default function MainPage() {
                             showsHorizontalScrollIndicator={false}
                             initialNumToRender={4} />
                     </View>
-                    <SeeAll text="Wszystkie katgorie" />
+                    <SeeAll text="Wszystkie kategorie"/>
+                </Container>
+                <Container>
+                    <HotShot/>
                 </Container>
             </ScrollView>
         </SafeAreaView>

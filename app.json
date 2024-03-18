@@ -32,7 +32,8 @@
         {
           "fonts": [
             "../../assets/fonts/Lato-Light.ttf",
-            "../../assets/fonts/Lato-Regular.ttf"
+            "../../assets/fonts/Lato-Regular.ttf",
+            "../../assets/fonts/JetBrainsMono-Regular.ttf"
           ]
         }
       ]

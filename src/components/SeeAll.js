@@ -1,32 +1,36 @@
-<<<<<<< HEAD
-import { StyleSheet, View, Text, TouchableWithoutFeedback, Animated } from "react-native";
+import { StyleSheet, View, Text, TouchableWithoutFeedback, Animated, Easing } from "react-native";
 import { ICONS } from "../constants/icons"
 import { SIZES } from "../constants/sizes";
 import { COLORS } from "../constants/colors";
-import HoverAnimation from "./HoverAnimation";
 import { useState, useRef } from "react";
 export default function SeeAll({ text })
 {
-    const [hovPosition, setHovPosition] = useState({x:0, y:0});
+    const [circlePosition, setCirclePosition] = useState({ x: 0, y: 0 });
     const [showCircle, setShowCircle] = useState(false);
-    const circleSize = useRef(new Animated.Value(25)).current;
+    const hoverAnimation = useRef(new Animated.Value(1)).current
     const handlePress = (event) =>
     {
-        const { locationX, locationY } = event.nativeEvent;
-        setHovPosition({x:locationX, y:locationY});
-        setShowCircle(true);
-        Animated.timing(circleSize, {
-            toValue: 1000, // rozmiar ekranu
-            duration: 1000, // czas trwania animacji
-            useNativeDriver: false,
-          }).start();
+        const { locationX, locationY } = event.nativeEvent
+        setCirclePosition({ x: Math.floor(locationX), y: Math.floor(locationY) })
+        setShowCircle(true)
+        Animated.timing(hoverAnimation, {
+            toValue: 10,
+            duration: 200,
+            delay: 100,
+            easing: Easing.in,
+            useNativeDriver: false
+        }).start();
     }
     return (
         <>
             <View style={styles.underline}></View>
-            <TouchableWithoutFeedback onLongPress={handlePress} onPressOut={()=>setShowCircle(false)}>
+            <TouchableWithoutFeedback onPressIn={handlePress} onPressOut={() =>
+            {
+                setShowCircle(false);
+                hoverAnimation.setValue(0);
+            }}>
                 <View style={styles.textBox}>
-                    <HoverAnimation pos_x={hovPosition.x} pos_y={hovPosition.y} show={showCircle} size={circleSize} />
+                    {showCircle && (<Animated.View style={[styles.hover, { top: circlePosition.y, left: circlePosition.x }, { transform: [{ scale: hoverAnimation }] }]}></Animated.View>)}
                     <Text>{text}</Text>
                     <Text style={styles.icon}>{ICONS.rightArrowIcon}</Text>
                 </View>
@@ -50,31 +54,18 @@ const styles = StyleSheet.create({
         paddingHorizontal: SIZES.width * 0.05,
         flexDirection: "row",
         alignItems: "center",
-        
         overflow: "hidden"
     },
 
     icon: {
         marginLeft: "auto",
         marginBottom: 3
+    },
+
+    hover: {
+        position: "absolute",
+        backgroundColor: "rgba(0, 0, 0, 0.1)",
+        width: "25%",
+        height: "150%",
     }
 })
-=======
-import { View, Text } from "react-native";
-import { ICONS } from "../constants/icons"
-
-import { seeAllStyles } from "../styles/seeAllStyles";
-
-export default function ({ text }) {
-    return (
-        <>
-            <View style={seeAllStyles.underline}></View>
-            <View style={seeAllStyles.textBox}>
-                <Text style={seeAllStyles.text}>{text}</Text>
-                <Text style={seeAllStyles.icon}>{ICONS.rightArrowIcon}</Text>
-            </View>
-            <View style={seeAllStyles.underlineBottom}></View>
-        </>
-    )
-}
->>>>>>> main

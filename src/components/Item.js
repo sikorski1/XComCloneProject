@@ -16,7 +16,7 @@ export const getItem = (data, index) => ({
 
 export const getItemCount = () => DATA.length;
 
-export const Item = ({ title, imageUri }) => (
+export const Item = ({ title, imageUri }) =>(
     <View style={styles.item}>
         <Text numberOfLines={2} ellipsizeMode="tail" style={styles.title}>{title}</Text>
         <Image source={imageUri} style={styles.image} />

@@ -29,4 +29,9 @@ export const DATA = [
         title: 'Gaming',
         image: require('../../assets/pictures/gaming.jpg'),
     },
+    {
+        id:"6",
+        title:"Promocje",
+        image: require("../../assets/pictures/discount.png")
+    }
 ];

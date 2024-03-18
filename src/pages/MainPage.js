@@ -14,7 +14,7 @@ import HotShot from "../components/HotShot.js"
 
 
 export default function MainPage() {
-    const renderItem = ({ item }) => <Item title={item.title} imageUri={item.imageUri} />;
+    const renderItem = ({ item }) => <Item title={item.title} imageUri={item.imageUri} index={item.id}/>;
     const [fontsLoaded, fontError] = useFonts({
         'Lato-Light': require('../../assets/fonts/Lato-Light.ttf'),
         'Lato-Regular': require('../../assets/fonts/Lato-Regular.ttf'),

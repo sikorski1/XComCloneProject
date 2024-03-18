@@ -16,9 +16,9 @@ export const getItem = (data, index) => ({
 
 export const getItemCount = () => DATA.length;
 
-export const Item = ({ title, imageUri }) =>(
+export const Item = ({ title, imageUri, index}) =>(
     <View style={styles.item}>
-        <Text numberOfLines={2} ellipsizeMode="tail" style={styles.title}>{title}</Text>
+        <Text numberOfLines={2} ellipsizeMode="tail" style={[styles.title, {color: index==DATA.length-1 ? "#be0064": "black"} ]}>{title}</Text>
         <Image source={imageUri} style={styles.image} />
     </View>
 );

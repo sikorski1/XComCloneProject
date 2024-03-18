@@ -67,5 +67,6 @@ const styles = StyleSheet.create({
         backgroundColor: "rgba(0, 0, 0, 0.1)",
         width: "25%",
         height: "150%",
+        borderRadius: 30
     }
 })

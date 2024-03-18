@@ -15,9 +15,9 @@ export default function SeeAll({ text })
         setShowCircle(true)
         Animated.timing(hoverAnimation, {
             toValue: 10,
-            duration: 200,
+            duration: 230,
             delay: 100,
-            easing: Easing.in,
+            easing:  Easing.bezier(1, 1, 0.3, 0.2),
             useNativeDriver: false
         }).start();
     }

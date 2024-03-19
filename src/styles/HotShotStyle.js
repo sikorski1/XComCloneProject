@@ -9,7 +9,7 @@ export const styles = StyleSheet.create({
     },
 
     box: {
-        paddingTop: SIZES.margBig,
+        paddingVertical: SIZES.margBig,
         paddingHorizontal: SIZES.width * 0.05,
     },
 
@@ -20,7 +20,7 @@ export const styles = StyleSheet.create({
         marginBottom: SIZES.margBig,
         fontSize: SIZES.fontBig,
         fontWeight: "bold",
-        
+
     },
 
     boxSave: {
@@ -36,7 +36,7 @@ export const styles = StyleSheet.create({
         position: "absolute",
         top: SIZES.margBig,
         right: SIZES.width * 0.05,
-        alignItems:"flex-end"
+        alignItems: "flex-end"
     },
 
     boxTimerText: {
@@ -60,43 +60,73 @@ export const styles = StyleSheet.create({
 
     whiteLine: {
         position: "absolute",
-        width:1,
+        width: 1,
         alignSelf: "center",
         height: "75%",
         backgroundColor: COLORS.containerColor
     },
 
     boxMain: {
-        alignItems: "center"
+        alignItems: "center",
     },
 
     boxMainImg: {
-        width:SIZES.width*0.7,
-        height:SIZES.height*0.45
+        width: SIZES.width * 0.7,
+        height: SIZES.height * 0.45
     },
 
     boxImg: {
-        width:"100%",
-        height:"100%",
+        width: "100%",
+        height: "100%",
         resizeMode: "contain"
     },
 
     boxMainText: {
-        marginVertical: 3,
-        fontSize: SIZES.fontBig-4,
+        fontSize: SIZES.fontBig - 4,
         fontFamily: FONTS.LatoRegular
     },
 
     boxMainPrice: {
-        marginVertical:3,
-        fontSize: SIZES.fontBig-2,
+        marginVertical: 10,
+        fontSize: SIZES.fontBig - 2,
         color: COLORS.specialRed,
         fontFamily: FONTS.LatoRegular
     },
 
     boxMainPriceDeleted: {
-        fontSize: SIZES.fontSmall+4,
+        fontSize: SIZES.fontSmall + 4,
         color: COLORS.textColor,
         textDecorationLine: "line-through",
+    },
+
+    boxAmountBar: {
+        paddingVertical: 7,
+        paddingHorizontal:14,
+        width: SIZES.width * 0.9,
+        flexDirection: "row",
+        alignItems: "center",
+        backgroundColor: "grey",
+        borderRadius: 15
+    },
+
+    boxAmountBarLeft: {
+        color: COLORS.bgColor,
+        fontFamily: FONTS.LatoRegular
+    },
+
+    boxAmountBarSold: {
+        marginLeft: "auto",
+        color: COLORS.bgColor,
+        fontFamily: FONTS.LatoRegular
+    },
+
+    boxAmountBarShadow: {
+        position: "absolute",
+        top:0,
+        left:0,
+        bottom:0,
+        right:"70%",
+        borderRadius:15,
+        backgroundColor: "plum"
     }
 })

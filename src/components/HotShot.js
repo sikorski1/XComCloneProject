@@ -1,7 +1,7 @@
-import { View, Text, Image, FlatList } from "react-native"
+import { View, Text, Image } from "react-native"
 import { styles } from "../styles/HotShotStyle.js"
 import { SIZES } from "../constants/sizes.js"
-const timerData = ["godzin", "minut", "sekund"]
+import Timer from "./Timer.js";
 export default function HotShot()
 {
     return (
@@ -11,19 +11,7 @@ export default function HotShot()
                 <Text style={[styles.white]}>Oszczędź</Text>
                 <Text style={[styles.white, { fontSize: SIZES.fontBig - 2, fontWeight: "bold" }]}>200zł</Text>
             </View>
-            <View style={styles.boxTimer}>
-                <Text style={styles.boxTimerText}>Śpiesz się, oferta kończy się za:</Text>
-                <View style={styles.timer}>
-                    {timerData.map((data, index) => (
-                        <View style={[styles.timerRect, { marginLeft: index !== 0 ? 18 : 0 }]} key={index}>
-                            <Text style={[styles.white, { fontSize: SIZES.fontBig + 5 }]}>10</Text>
-                            <Text style={[styles.white, { fontSize: SIZES.fontSmall }]}>{data}</Text>
-                        </View>
-                    ))}
-                    <View style={[styles.whiteLine, { left: "37%" }]}></View>
-                    <View style={[styles.whiteLine, { left: "74%" }]}></View>
-                </View>
-            </View>
+            <Timer></Timer>
             <View style={styles.boxMain}>
                 <View style={styles.boxMainImg}><Image style={styles.boxImg} source={{ uri: "https://cdn.x-kom.pl/i/img/promotions/hot-shot-large,,hs_2024_3_18_13_47_7.PNG" }} /></View>
                 <Text style={styles.boxMainText}>Ale sprzencior wow mega 😲</Text>

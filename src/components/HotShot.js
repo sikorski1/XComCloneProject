@@ -2,8 +2,13 @@ import { View, Text, Image } from "react-native"
 import { styles } from "../styles/HotShotStyle.js"
 import { SIZES } from "../constants/sizes.js"
 import Timer from "./Timer.js";
+import hotShotdata from "../data/hotShotData.json";
 export default function HotShot()
 {
+    const today = new Date().getDate();
+    const todayData = hotShotdata[today%hotShotdata.length]
+    const amountbar = Math.floor(Math.random()*100)
+    const amount = 200;
     return (
         <View style={styles.box}>
             <Text style={styles.boxTitle}>Gorący strzał</Text>
@@ -13,13 +18,13 @@ export default function HotShot()
             </View>
             <Timer></Timer>
             <View style={styles.boxMain}>
-                <View style={styles.boxMainImg}><Image style={styles.boxImg} source={{ uri: "https://cdn.x-kom.pl/i/img/promotions/hot-shot-large,,hs_2024_3_18_13_47_7.PNG" }} /></View>
-                <Text style={styles.boxMainText}>Ale sprzencior wow mega 😲</Text>
-                <Text style={styles.boxMainPrice}>999,00 zł  <Text style={styles.boxMainPriceDeleted}>1 199,00 zł</Text></Text>
+                <View style={styles.boxMainImg}><Image style={styles.boxImg} source={{ uri: todayData.img }} /></View>
+                <Text style={styles.boxMainText}>{todayData.name}</Text>
+                <Text style={styles.boxMainPrice}>{todayData.price}  <Text style={styles.boxMainPriceDeleted}>{todayData.fromPrice}</Text></Text>
                 <View style={styles.boxAmountBar}>
-                    <View style={styles.boxAmountBarShadow}></View>
-                    <Text style={styles.boxAmountBarLeft}>Pozostało: 93</Text>
-                    <Text style={styles.boxAmountBarSold}>Sprzedano: 107</Text>
+                    <View style={[styles.boxAmountBarShadow, {right: amountbar + "%"}]}></View>
+                    <Text style={styles.boxAmountBarLeft}>Pozostało: {amount-(amountbar/100)*amount}</Text>
+                    <Text style={styles.boxAmountBarSold}>Sprzedano: {amount*(amountbar/100)}</Text>
                 </View>
             </View>
         </View>

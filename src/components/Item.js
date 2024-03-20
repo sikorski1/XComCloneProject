@@ -4,7 +4,7 @@ import {
     Text,
     Image,
 } from 'react-native';
-import { DATA } from '../constants/DATA';
+import { DATA } from '../data/DATA';
 import { styles } from '../styles/firstSStyle';
 
 

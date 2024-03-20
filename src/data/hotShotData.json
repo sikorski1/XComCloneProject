@@ -1,0 +1,44 @@
+[
+	{
+		"id": "1",
+		"name": "sigma",
+		"price": "999,00 zł",
+		"fromPrice": "1199,00 zł",
+		"img": "https://cdn.x-kom.pl/i/img/promotions/hot-shot-large,,hs_2024_3_18_13_47_7.PNG"
+	},
+	{
+		"id": "2",
+		"name": "ASUS TUF VG27AQ HDR",
+		"price": "989,00 zł",
+		"fromPrice": "1249,00 zł",
+		"img": "https://cdn.x-kom.pl/i/img/promotions/hot-shot-large,,hs_2024_3_20_14_56_38.PNG"
+	},
+	{
+		"id": "3",
+		"name": "Lenovo R25i-30",
+		"price": "699,00 zł",
+		"fromPrice": "799,00 zł",
+		"img": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2023/10/pr_2023_10_10_9_35_50_260_01.jpg"
+	},
+	{
+		"id": "4",
+		"name": "Nothing Phone (2a) 5G 12/256GB Black 120Hz",
+		"price": "1449,00 zł",
+		"fromPrice": "1 679,00 zł",
+		"img": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2024/3/pr_2024_3_1_11_29_50_969_04.jpg"
+	},
+	{
+		"id": "5",
+		"name": "Google Chromecast 4.0 HD z Google TV",
+		"price": "140,00 zł",
+		"fromPrice": "199,00 zł",
+		"img": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2022/11/pr_2022_11_16_8_42_3_823_03.jpg"
+	},
+	{
+		"id": "6",
+		"name": "AMD Ryzen 7 7800X3D",
+		"price": "1389,00 zł",
+		"fromPrice": "1 649,00 zł",
+		"img": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2023/2/pr_2023_2_28_10_12_13_142_00.jpg"
+	}
+]

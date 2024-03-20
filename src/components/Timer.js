@@ -11,10 +11,8 @@ export default function Timer()
         const now = new Date();
         const target = new Date(now);
         target.setDate(now.getDate() + 1);
-        target.setHours(0);
-        target.setMinutes(0);
-        target.setSeconds(0);
-        const difference = target - now;
+        target.setHours(0, 0, 0, 0);
+        const difference = target.getTime() - now.getTime();
         const hours = Math.floor(difference / (1000 * 60 * 60));
         const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((difference % (1000 * 60)) / 1000);

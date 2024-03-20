@@ -125,7 +125,6 @@ export const styles = StyleSheet.create({
         top:0,
         left:0,
         bottom:0,
-        right:"70%",
         borderRadius:15,
         backgroundColor: "plum"
     }

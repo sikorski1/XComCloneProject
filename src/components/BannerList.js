@@ -2,7 +2,7 @@ import { React, } from "react"
 import { View, FlatList, Image, Dimensions, } from "react-native"
 import { SIZES } from "../constants/sizes.js"
 import { styles } from "../styles/firstSStyle.js"
-import bannerList from "../../data/firstSData.json"
+import bannerList from "../data/bannerData.json"
 
 export default function BannerList() {
     const CARD_WIDTH_SPACING = Dimensions.get("window").width * 0.85 + SIZES.spacing;

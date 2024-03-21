@@ -11,6 +11,7 @@ export const styles = StyleSheet.create({
     box: {
         paddingVertical: SIZES.margBig,
         paddingHorizontal: SIZES.width * 0.05,
+        overflow: "hidden"
     },
 
     boxHeader: {

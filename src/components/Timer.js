@@ -1,6 +1,6 @@
 import { View, Text } from "react-native"
 import { useState, useEffect } from "react"
-import { styles } from "../styles/HotShotStyle.js"
+import { styles } from "../styles/hotShotStyle.js"
 import { SIZES } from "../constants/sizes.js"
 export default function Timer()
 {

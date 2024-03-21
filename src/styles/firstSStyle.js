@@ -101,6 +101,7 @@ export const styles = StyleSheet.create({
         shadowOffset: 4,
         elevation: 4, // Shadow depth
         borderRadius: 4,
+        overflow: "hidden"
     },
     image: {
         width: 50,

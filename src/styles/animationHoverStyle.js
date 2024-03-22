@@ -12,8 +12,8 @@ export const stylesAnim = StyleSheet.create({
     hoverItems: {
         position: "absolute",
         backgroundColor: "rgba(0, 0, 0, 0.05)",
-        width: "25%",
-        height: "150%",
+        width: "45%",
+        height: "40%",
         borderRadius: 30,
         zIndex: 100
     },
@@ -21,9 +21,9 @@ export const stylesAnim = StyleSheet.create({
     hoverHotShot: {
         position: "absolute",
         backgroundColor: "rgba(0, 0, 0, 0.1)",
-        width: "25%",
-        height: "40%",
-        borderRadius:50,
+        width: "45%",
+        height: "30%",
+        borderRadius:100,
         zIndex: 100
     }
 })

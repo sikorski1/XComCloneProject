@@ -1,6 +1,7 @@
 import { View, Text, Image, Animated, TouchableWithoutFeedback } from "react-native"
 import { useState, useRef } from "react";
 import { animationHoverHandle } from "../animations/animationHoverHandle.js";
+import { animationHoverDropHandle } from "../animations/animationHoverDropHandle"
 import { styles } from "../styles/hotShotStyle.js"
 import { stylesAnim } from "../styles/animationHoverStyle.js"
 import { SIZES } from "../constants/sizes.js"
@@ -13,14 +14,17 @@ export default function HotShot()
     const [AnimPosition, setAnimPosition] = useState({ x: 0, y: 0 });
     const [showAnim, setShowAnim] = useState(false);
     const hoverAnimation = useRef(new Animated.Value(1)).current
+    const hoverDropAnimation = useRef(new Animated.Value(1)).current;
     return (
-        <TouchableWithoutFeedback onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 180)} onPressOut={() =>
+        <TouchableWithoutFeedback onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 280, hoverDropAnimation)} onPressOut={() =>
         {
-            setShowAnim(false);
-            hoverAnimation.setValue(0);
+            animationHoverDropHandle(hoverDropAnimation);
+            setTimeout(() => {
+                hoverAnimation.setValue(0)
+            }, 200);
         }}>
             <View style={styles.box}>
-                {showAnim && (<Animated.View style={[stylesAnim.hoverHotShot, { top: AnimPosition.y, left: AnimPosition.x }, { transform: [{ scale: hoverAnimation }] }]}></Animated.View>)}
+                {showAnim && (<Animated.View style={[stylesAnim.hoverHotShot, { top: AnimPosition.y, left: AnimPosition.x }, { opacity: hoverDropAnimation }, { transform: [{ scale: hoverAnimation }] }]}></Animated.View>)}
                 <Text style={styles.boxTitle}>Gorący strzał</Text>
                 <View style={styles.boxSave}>
                     <Text style={[styles.white]}>Oszczędź</Text>

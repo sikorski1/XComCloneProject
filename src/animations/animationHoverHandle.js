@@ -4,7 +4,7 @@ export const animationHoverHandle = (event, setAnimPosition, setShowAnim, hoverA
     const { locationX, locationY } = event.nativeEvent
     console.log(locationX, locationY);
     setAnimPosition({ x: Math.floor(locationX), y: Math.floor(locationY) })
-    hoverDropAnimation.setValue(1)
+    // hoverDropAnimation.setValue(1)
     setShowAnim(true)
     Animated.timing(hoverAnimation, {
         toValue: 10,

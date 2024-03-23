@@ -33,7 +33,7 @@ export const Item = ({ title, imageUri, index }) =>
             animationHoverDropHandle(hoverDropAnimation);
             setTimeout(() => {
                 hoverAnimation.setValue(0)
-            }, 200);
+            }, 300);
         }}>
             <View style={styles.item}>
                 {showAnim && (<Animated.View style={[stylesAnim.hoverItems,  

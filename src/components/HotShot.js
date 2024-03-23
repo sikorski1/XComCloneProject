@@ -2,7 +2,7 @@ import { View, Text, Image, Animated, TouchableWithoutFeedback } from "react-nat
 import { useState, useRef } from "react";
 import { animationHoverHandle } from "../animations/animationHoverHandle.js";
 import { animationHoverDropHandle } from "../animations/animationHoverDropHandle"
-import { styles } from "../styles/hotShotStyle.js"
+import { styles } from "../styles/hotShotStyyle.js"
 import { stylesAnim } from "../styles/animationHoverStyle.js"
 import { SIZES } from "../constants/sizes.js"
 import Timer from "./Timer.js";
@@ -18,10 +18,7 @@ export default function HotShot()
     return (
         <TouchableWithoutFeedback onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 280, hoverDropAnimation)} onPressOut={() =>
         {
-            animationHoverDropHandle(hoverDropAnimation);
-            setTimeout(() => {
                 hoverAnimation.setValue(0)
-            }, 200);
         }}>
             <View style={styles.box}>
                 {showAnim && (<Animated.View style={[stylesAnim.hoverHotShot, { top: AnimPosition.y, left: AnimPosition.x }, { opacity: hoverDropAnimation }, { transform: [{ scale: hoverAnimation }] }]}></Animated.View>)}

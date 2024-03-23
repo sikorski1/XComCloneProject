@@ -2,16 +2,16 @@ import { React, useCallback, useState } from "react"
 import { View, Text, SafeAreaView, VirtualizedList, ScrollView, } from "react-native"
 import { ICONS } from "../constants/icons.js"
 import { styles } from "../styles/firstSStyle.js"
+import {DATA} from "../data/DATA.js"
+import { useFonts} from 'expo-font';
+import * as SplashScreen from 'expo-splash-screen';
+import { Item, getItem, getItemCount } from "../components/Item.js"
 import Container from "../components/Container.js"
 import SeeAll from "../components/SeeAll.js"
 import Finder from "../components/Finder.js"
-import { useFonts} from 'expo-font';
-import {DATA} from "../data/DATA.js"
-import * as SplashScreen from 'expo-splash-screen';
-import { Item, getItem, getItemCount } from "../components/Item.js"
 import BannerList from "../components/BannerList.js"
 import HotShot from "../components/HotShot.js"
-
+import UnBox from "../components/UnBox.js"
 
 export default function MainPage() {
     const renderItem = ({ item }) => <Item title={item.title} imageUri={item.imageUri} index={item.id}/>;
@@ -66,6 +66,9 @@ export default function MainPage() {
                 </Container>
                 <Container>
                     <HotShot/>
+                </Container>
+                <Container>
+                    <UnBox></UnBox>
                 </Container>
             </ScrollView>
         </SafeAreaView>

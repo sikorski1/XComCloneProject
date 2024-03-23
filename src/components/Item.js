@@ -31,15 +31,16 @@ export const Item = ({ title, imageUri, index }) =>
         <TouchableWithoutFeedback onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 180)} onPressOut={() =>
         {
             animationHoverDropHandle(hoverDropAnimation);
-            setTimeout(()=>{
+            setTimeout(() =>
+            {
                 hoverAnimation.setValue(0)
                 setShowAnim(false)
                 hoverDropAnimation.setValue(1)
             }, 200)
         }}>
             <View style={styles.item}>
-                {showAnim && (<Animated.View style={[stylesAnim.hoverItems,  
-                    { top: AnimPosition.y, left: AnimPosition.x }, { opacity: hoverDropAnimation }, { transform: [{ scale: hoverAnimation }] }]}></Animated.View>)}
+                {showAnim && (<Animated.View style={[stylesAnim.hoverItems,
+                { top: AnimPosition.y, left: AnimPosition.x }, { opacity: hoverDropAnimation }, { transform: [{ scale: hoverAnimation }] }]}></Animated.View>)}
                 <Text numberOfLines={2} ellipsizeMode="tail" style={[styles.title, { color: index == DATA.length - 1 ? "#be0064" : "black" }]}>{title}</Text>
                 <Image source={imageUri} style={styles.image} />
             </View>

@@ -19,13 +19,12 @@ export default function HotShot()
         <TouchableWithoutFeedback onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 280, hoverDropAnimation)} onPressOut={() =>
         {
             animationHoverDropHandle(hoverDropAnimation)
-                setTimeout(()=>{
-                    hoverAnimation.setValue(0)
-                    setShowAnim(false)
-                    hoverDropAnimation.setValue(1)
-                }, 200)
-            
-            
+            setTimeout(() =>
+            {
+                hoverAnimation.setValue(0)
+                setShowAnim(false)
+                hoverDropAnimation.setValue(1)
+            }, 200)
         }}>
             <View style={styles.box}>
                 {showAnim && (<Animated.View style={[stylesAnim.hoverHotShot, { top: AnimPosition.y, left: AnimPosition.x }, { opacity: hoverDropAnimation }, { transform: [{ scale: hoverAnimation }] }]}></Animated.View>)}

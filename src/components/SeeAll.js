@@ -15,15 +15,18 @@ export default function SeeAll({ text })
     return (
         <>
             <View style={styles.underline}></View>
-            <TouchableWithoutFeedback onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 230, hoverDropAnimation)} onPressOut={() =>
+            <TouchableWithoutFeedback onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 230)} onPressOut={() =>
             {
                 animationHoverDropHandle(hoverDropAnimation);
-                setTimeout(() => {
+                setTimeout(() =>
+                {
                     hoverAnimation.setValue(0)
-                }, 200);
+                    setShowAnim(false)
+                    hoverDropAnimation.setValue(1)
+                }, 200)
             }}>
                 <View style={styles.textBox}>
-                    {showAnim && (<Animated.View style={[stylesAnim.hoverSeeAll, { top: AnimPosition.y, left: AnimPosition.x }, { opacity: hoverDropAnimation },  { transform: [{ scale: hoverAnimation }] }]}></Animated.View>)}
+                    {showAnim && (<Animated.View style={[stylesAnim.hoverSeeAll, { top: AnimPosition.y, left: AnimPosition.x }, { opacity: hoverDropAnimation }, { transform: [{ scale: hoverAnimation }] }]}></Animated.View>)}
                     <Text>{text}</Text>
                     <Text style={styles.icon}>{ICONS.rightArrowIcon}</Text>
                 </View>

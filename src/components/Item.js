@@ -28,12 +28,14 @@ export const Item = ({ title, imageUri, index }) =>
     const hoverAnimation = useRef(new Animated.Value(1)).current
     const hoverDropAnimation = useRef(new Animated.Value(1)).current;
     return (
-        <TouchableWithoutFeedback onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 180, hoverDropAnimation)} onPressOut={() =>
+        <TouchableWithoutFeedback onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 180)} onPressOut={() =>
         {
             animationHoverDropHandle(hoverDropAnimation);
-            setTimeout(() => {
+            setTimeout(()=>{
                 hoverAnimation.setValue(0)
-            }, 300);
+                setShowAnim(false)
+                hoverDropAnimation.setValue(1)
+            }, 200)
         }}>
             <View style={styles.item}>
                 {showAnim && (<Animated.View style={[stylesAnim.hoverItems,  

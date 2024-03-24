@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 import { SIZES } from '../constants/sizes.js';
 import { COLORS } from '../constants/colors.js';
 import { FONTS } from "../constants/fonts.js";
+import { Colors } from "react-native/Libraries/NewAppScreen";
 export const styles = StyleSheet.create({
     white: {
         color: COLORS.containerColor,
@@ -127,6 +128,6 @@ export const styles = StyleSheet.create({
         left:0,
         bottom:0,
         borderRadius:15,
-        backgroundColor: "plum"
+        backgroundColor: COLORS.purpleUnBox
     }
 })

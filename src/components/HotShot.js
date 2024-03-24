@@ -15,6 +15,7 @@ export default function HotShot()
     const [showAnim, setShowAnim] = useState(false);
     const hoverAnimation = useRef(new Animated.Value(1)).current
     const hoverDropAnimation = useRef(new Animated.Value(1)).current;
+    const save = todayData.fromPrice.substring(0, todayData.fromPrice.indexOf(" ")).replace(",", ".") - todayData.price.substring(0, todayData.price.indexOf(" ")).replace(",", ".")
     return (
         <TouchableWithoutFeedback onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 280, hoverDropAnimation)} onPressOut={() =>
         {
@@ -31,7 +32,7 @@ export default function HotShot()
                 <Text style={styles.boxTitle}>Gorący strzał</Text>
                 <View style={styles.boxSave}>
                     <Text style={[styles.white]}>Oszczędź</Text>
-                    <Text style={[styles.white, { fontSize: SIZES.fontBig - 2, fontWeight: "bold" }]}>200zł</Text>
+                    <Text style={[styles.white, { fontSize: SIZES.fontBig - 2, fontWeight: "bold" }]}>{save}</Text>
                 </View>
                 <Timer></Timer>
                 <View style={styles.boxMain}>

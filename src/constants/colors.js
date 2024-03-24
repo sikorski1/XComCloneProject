@@ -6,5 +6,6 @@ export const COLORS = {
     borderColor: "#dddddd",
     black: "#000",
     specialRed:"#be0064",
-    shadowLight: "rgba(0, 0, 0, 0.3)"
+    shadowLight: "rgba(0, 0, 0, 0.3)",
+    purpleUnBox: "#8a64d7"
 }

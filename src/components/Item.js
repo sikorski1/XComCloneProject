@@ -1,6 +1,5 @@
 import React from 'react';
-import
-{
+import {
     View,
     Text,
     Image,
@@ -21,18 +20,15 @@ export const getItem = (data, index) => ({
 
 export const getItemCount = () => DATA.length;
 
-export const Item = ({ title, imageUri, index }) =>
-{
+export const Item = ({ title, imageUri, index }) => {
     const [AnimPosition, setAnimPosition] = useState({ x: 0, y: 0 });
     const [showAnim, setShowAnim] = useState(false);
     const hoverAnimation = useRef(new Animated.Value(1)).current
     const hoverDropAnimation = useRef(new Animated.Value(1)).current;
     return (
-        <TouchableWithoutFeedback onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 180)} onPressOut={() =>
-        {
+        <TouchableWithoutFeedback onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 180)} onPressOut={() => {
             animationHoverDropHandle(hoverDropAnimation);
-            setTimeout(() =>
-            {
+            setTimeout(() => {
                 hoverAnimation.setValue(0)
                 setShowAnim(false)
                 hoverDropAnimation.setValue(1)

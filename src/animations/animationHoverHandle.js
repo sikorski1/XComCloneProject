@@ -5,7 +5,7 @@ export const animationHoverHandle = (event, setAnimPosition, setShowAnim, hoverA
     setAnimPosition({ x: Math.floor(locationX), y: Math.floor(locationY) })
     setShowAnim(true)
     Animated.timing(hoverAnimation, {
-        toValue: 10,
+        toValue: 7.5,
         duration: duration,
         delay:100,
         easing: Easing.bezier(1, 1, 0.3, 0.2),

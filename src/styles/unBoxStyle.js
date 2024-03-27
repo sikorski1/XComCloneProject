@@ -60,8 +60,8 @@ export const styles = StyleSheet.create({
 
     boxArrowIcon: {
         color: COLORS.bgColor,
-        top: -5,
-        right: 5
+        top: "-8%",
+        right: "5%"
     }
 
 })

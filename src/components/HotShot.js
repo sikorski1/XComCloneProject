@@ -32,7 +32,7 @@ export default function HotShot()
                 <Text style={styles.boxTitle}>Gorący strzał</Text>
                 <View style={styles.boxSave}>
                     <Text style={[styles.white]}>Oszczędź</Text>
-                    <Text style={[styles.white, { fontSize: SIZES.fontBig - 2, fontWeight: "bold" }]}>{save}</Text>
+                    <Text style={[styles.white, { fontSize: SIZES.fontBig - 2, fontWeight: "bold" }]}>{save} zł</Text>
                 </View>
                 <Timer></Timer>
                 <View style={styles.boxMain}>

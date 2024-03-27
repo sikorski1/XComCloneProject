@@ -37,7 +37,7 @@ export default function Timer()
                         <Text style={[styles.white, { fontSize: SIZES.fontSmall }]}>{data}</Text>
                     </View>
                 ))}
-                <View style={[styles.whiteLine, { left: "37%" }]}></View>
+                <View style={[styles.whiteLine, { left: "35%" }]}></View>
                 <View style={[styles.whiteLine, { left: "74%" }]}></View>
             </View>
         </View>

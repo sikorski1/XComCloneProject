@@ -3,7 +3,7 @@ export const stylesAnim = StyleSheet.create({
     hoverSeeAll: {
         position: "absolute",
         backgroundColor: "rgba(0, 0, 0, 0.1)",
-        width: "25%",
+        width: "35%",
         height: "150%",
         borderRadius: 30,
         zIndex: 100
@@ -12,8 +12,8 @@ export const stylesAnim = StyleSheet.create({
     hoverItems: {
         position: "absolute",
         backgroundColor: "rgba(0, 0, 0, 0.05)",
-        width: "45%",
-        height: "40%",
+        width: "53%",
+        height: "47%",
         borderRadius: 30,
         zIndex: 100
     },
@@ -21,8 +21,8 @@ export const stylesAnim = StyleSheet.create({
     hoverHotShot: {
         position: "absolute",
         backgroundColor: "rgba(0, 0, 0, 0.1)",
-        width: "45%",
-        height: "30%",
+        width: "65%",
+        height: "40%",
         borderRadius:100,
         zIndex: 100
     },

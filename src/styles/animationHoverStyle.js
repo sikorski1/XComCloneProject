@@ -31,7 +31,7 @@ export const stylesAnim = StyleSheet.create({
         position: "absolute",
         backgroundColor: "rgba(0, 0, 0, 0.1)",
         width: "45%",
-        height: "35%",
+        height: "45%",
         borderRadius:50,
         zIndex: 100
     }

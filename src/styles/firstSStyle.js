@@ -1,7 +1,7 @@
 import { StyleSheet, StatusBar } from "react-native";
 import { COLORS } from "../constants/colors.js";
 import { SIZES } from "../constants/sizes.js";
-
+import { FONTS } from "../constants/fonts.js";
 export const styles = StyleSheet.create({
     //boxOne
     boxOne: {
@@ -14,7 +14,6 @@ export const styles = StyleSheet.create({
 
     boxOneText: {
         fontSize: SIZES.fontBig,
-        fontFamily: 'JetBrainsMono-Regular',
     },
 
     //boxTwo
@@ -27,11 +26,10 @@ export const styles = StyleSheet.create({
         paddingVertical: 3,
         flexDirection: "row",
         alignItems: "center",
-        width: SIZES.width*0.9,
+        width: SIZES.width * 0.9,
         borderColor: COLORS.borderColor,
         borderWidth: 1,
         borderRadius: 15,
-        fontFamily: 'JetBrainsMono-Regular',
         marginBottom: 16,
     },
 
@@ -42,7 +40,6 @@ export const styles = StyleSheet.create({
     boxTwoInput: {
         marginHorizontal: 5,
         flex: 1,
-        fontFamily: 'JetBrainsMono-Regular',
     },
 
     boxTwoQRIcon: {
@@ -115,7 +112,6 @@ export const styles = StyleSheet.create({
         fontSize: 12,
         textAlign: 'center',
         overflow: 'hidden',
-        fontFamily: 'JetBrainsMono-Regular',
     },
     container: {
         marginTop: 4,

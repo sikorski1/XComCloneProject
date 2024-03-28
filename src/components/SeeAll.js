@@ -1,11 +1,10 @@
-import { StyleSheet, View, Text, TouchableWithoutFeedback, Animated } from "react-native";
+import { View, Text, TouchableWithoutFeedback, Animated } from "react-native";
 import { stylesAnim } from "../styles/animationHoverStyle"
-import { ICONS } from "../constants/icons"
-import { SIZES } from "../constants/sizes";
-import { COLORS } from "../constants/colors";
+import { styles } from "../styles/seeAllStyle";
 import { useState, useRef } from "react";
 import { animationHoverHandle } from "../animations/animationHoverHandle";
 import { animationHoverDropHandle } from "../animations/animationHoverDropHandle"
+import { ICONS } from "../constants/icons";
 export default function SeeAll({ text })
 {
     const [AnimPosition, setAnimPosition] = useState({ x: 0, y: 0 });
@@ -27,7 +26,7 @@ export default function SeeAll({ text })
             }}>
                 <View style={styles.textBox}>
                     {showAnim && (<Animated.View style={[stylesAnim.hoverSeeAll, { top: AnimPosition.y, left: AnimPosition.x }, { opacity: hoverDropAnimation }, { transform: [{ scale: hoverAnimation }] }]}></Animated.View>)}
-                    <Text>{text}</Text>
+                    <Text style={styles.text}>{text}</Text>
                     <Text style={styles.icon}>{ICONS.rightArrowIcon}</Text>
                 </View>
             </TouchableWithoutFeedback>
@@ -35,26 +34,3 @@ export default function SeeAll({ text })
     )
 }
 
-const styles = StyleSheet.create({
-    underline: {
-        marginTop: SIZES.margBig,
-        marginHorizontal: "auto",
-        alignSelf: "center",
-        height: 1,
-        width: SIZES.width * 0.9,
-        backgroundColor: COLORS.borderColor,
-    },
-
-    textBox: {
-        paddingVertical: SIZES.margBig / 2 + 3,
-        paddingHorizontal: SIZES.width * 0.05,
-        flexDirection: "row",
-        alignItems: "center",
-        overflow: "hidden"
-    },
-
-    icon: {
-        marginLeft: "auto",
-        marginBottom: 3
-    }
-})

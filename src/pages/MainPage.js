@@ -43,7 +43,7 @@ export default function MainPage() {
             <ScrollView>
                 <Container onLayout={onLayoutRootView}>
                     <View style={styles.boxOne}>
-                        <Text style={styles.boxOneText}>{4<=getCurrentTimeInPoland() && getCurrentTimeInPoland()<=18 ? "Dzień Dobry": "Dobry Wieczór"}</Text>
+                        <Text style={styles.boxOneText}>{4<=getCurrentTimeInPoland() && getCurrentTimeInPoland()<=18 ? "Dzień dobry": "Dobry wieczór"}</Text>
                         <Text>{ICONS.bellIcon}</Text>
                     </View>
                     <Finder />

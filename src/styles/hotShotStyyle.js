@@ -6,7 +6,6 @@ import { Colors } from "react-native/Libraries/NewAppScreen";
 export const styles = StyleSheet.create({
     white: {
         color: COLORS.containerColor,
-        fontFamily: FONTS.LatoRegular
     },
 
     box: {
@@ -43,8 +42,7 @@ export const styles = StyleSheet.create({
 
     boxTimerText: {
         marginBottom: 2,
-        fontSize: SIZES.fontSmall,
-        fontFamily: FONTS.LatoRegular
+        fontSize: SIZES.fontSmall
     },
 
     timer: {
@@ -84,15 +82,13 @@ export const styles = StyleSheet.create({
     },
 
     boxMainText: {
-        fontSize: SIZES.fontBig - 4,
-        fontFamily: FONTS.LatoRegular
+        fontSize: SIZES.fontBig - 6,
     },
 
     boxMainPrice: {
         marginVertical: 10,
         fontSize: SIZES.fontBig - 2,
         color: COLORS.specialRed,
-        fontFamily: FONTS.LatoRegular
     },
 
     boxMainPriceDeleted: {
@@ -113,13 +109,11 @@ export const styles = StyleSheet.create({
 
     boxAmountBarLeft: {
         color: COLORS.bgColor,
-        fontFamily: FONTS.LatoRegular
     },
 
     boxAmountBarSold: {
         marginLeft: "auto",
         color: COLORS.bgColor,
-        fontFamily: FONTS.LatoRegular
     },
 
     boxAmountBarShadow: {

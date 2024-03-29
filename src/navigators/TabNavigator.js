@@ -2,7 +2,7 @@ import { ICONS } from "../constants/icons.js"
 import { NavigationContainer } from "@react-navigation/native"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { styles } from "../styles/tabNavigationStyle.js"
-import { TabBarIcon } from "./TabBarIcon.js"
+import TabBarIcon from "./TabBarIcon.js"
 import StackNavigator from "../navigators/StackNavigator.js";
 import SearchPage from "../pages/SearchPage.js"
 import ShopListPage from "../pages/ShopListPage.js"
@@ -20,7 +20,7 @@ export default function TabNavigator()
                     tabBarShowLabel: false,
                     tabBarStyle: styles.tabNav,
                 }}>
-                <Tab.Screen
+                <Tab.Screen 
                     name="StackMainPage"
                     component={StackNavigator}
                     options={{

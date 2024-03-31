@@ -4,7 +4,8 @@ import { SIZES } from "../constants/sizes.js"
 import { styles } from "../styles/firstSStyle.js"
 import bannerList from "../data/bannerData.json"
 
-export default function BannerList() {
+export default function BannerList()
+{
     const CARD_WIDTH_SPACING = Dimensions.get("window").width * 0.85 + SIZES.spacing;
     return (
         <View style={styles.boxThree}>
@@ -14,7 +15,8 @@ export default function BannerList() {
                 snapToInterval={CARD_WIDTH_SPACING}
                 decelerationRate="fast"
                 horizontal
-                renderItem={({ item, index }) => {
+                renderItem={({ item, index }) =>
+                {
                     return (
                         <View key={item.id}
                             style={[styles.boxThreeImgContainer,

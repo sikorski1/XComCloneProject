@@ -1,4 +1,4 @@
-import { SafeAreaView, ScrollView, StatusBar } from "react-native"
+import { SafeAreaView, ScrollView, StatusBar, Text } from "react-native"
 import { Container, Solution1, Solution2 } from "../components/LabExercises"
 export default function SignUpPage()
 
@@ -7,14 +7,14 @@ export default function SignUpPage()
     return (
         <SafeAreaView style={{ marginTop: StatusBar.currentHeight }}>
             <ScrollView>
-            {/*zadanie 1*/}
+                {/*zadanie 1, 2*/}
                 <Container>
                     <Solution1></Solution1>
                 </Container>
+            {/*zadanie 3*/}
                 <Container>
                     <Solution2></Solution2>
                 </Container>
-            {/*zadanie 2*/}
 
         
             </ScrollView>

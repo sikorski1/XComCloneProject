@@ -13,7 +13,7 @@ export const Solution1 = () =>
 {
     const [name, setName] = useState("Bob")
     return (
-        <View style={{ paddingVertical: 20 }}>
+        <View style={{paddingVertical: 20 }}>
             <Text style={{ marginBottom: 20, fontSize: 30 }}>Witaj {name}</Text>
             <TextInput style={{ borderWidth: 1, borderRadius: 15, padding: 5, fontSize: 20, textAlign: "center" }}
                 placeholder="Wpisz imię"

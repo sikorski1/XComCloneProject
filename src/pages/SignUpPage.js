@@ -11,12 +11,12 @@ export default function SignUpPage()
                 <Container>
                     <Solution1></Solution1>
                 </Container>
-            {/*zadanie 3*/}
+                {/*zadanie 3*/}
                 <Container>
                     <Solution2></Solution2>
                 </Container>
 
-        
+
             </ScrollView>
         </SafeAreaView>
     )

@@ -17,16 +17,19 @@ export default function HotShot()
     const hoverDropAnimation = useRef(new Animated.Value(1)).current;
     const save = todayData.fromPrice.substring(0, todayData.fromPrice.indexOf(" ")).replace(",", ".") - todayData.price.substring(0, todayData.price.indexOf(" ")).replace(",", ".")
     return (
-        <TouchableWithoutFeedback onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 280, hoverDropAnimation)} onPressOut={() =>
-        {
-            animationHoverDropHandle(hoverDropAnimation)
-            setTimeout(() =>
+        <TouchableWithoutFeedback
+            onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 280, hoverDropAnimation)}
+            onPressOut={() =>
             {
-                hoverAnimation.setValue(0)
-                setShowAnim(false)
-                hoverDropAnimation.setValue(1)
-            }, 200)
-        }}>
+                animationHoverDropHandle(hoverDropAnimation)
+                setTimeout(() =>
+                {
+                    hoverAnimation.setValue(0)
+                    setShowAnim(false)
+                    hoverDropAnimation.setValue(1)
+                }, 200)
+            }}
+        >
             <View style={styles.box}>
                 {showAnim && (<Animated.View style={[stylesAnim.hoverHotShot, { top: AnimPosition.y, left: AnimPosition.x }, { opacity: hoverDropAnimation }, { transform: [{ scale: hoverAnimation }] }]}></Animated.View>)}
                 <Text style={styles.boxTitle}>Gorący strzał</Text>

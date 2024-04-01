@@ -20,20 +20,26 @@ export const getItem = (data, index) => ({
 
 export const getItemCount = () => DATA.length;
 
-export const Item = ({ title, imageUri, index }) => {
+export const Item = ({ title, imageUri, index, navigation }) =>
+{
     const [AnimPosition, setAnimPosition] = useState({ x: 0, y: 0 });
     const [showAnim, setShowAnim] = useState(false);
     const hoverAnimation = useRef(new Animated.Value(1)).current
     const hoverDropAnimation = useRef(new Animated.Value(1)).current;
     return (
-        <TouchableWithoutFeedback onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 180)} onPressOut={() => {
-            animationHoverDropHandle(hoverDropAnimation);
-            setTimeout(() => {
-                hoverAnimation.setValue(0)
-                setShowAnim(false)
-                hoverDropAnimation.setValue(1)
-            }, 200)
-        }}>
+        <TouchableWithoutFeedback
+            onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 180)}
+            onPressOut={() =>
+            {
+                animationHoverDropHandle(hoverDropAnimation);
+                setTimeout(() =>
+                {
+                    hoverAnimation.setValue(0)
+                    setShowAnim(false)
+                    hoverDropAnimation.setValue(1)
+                }, 200)
+            }}
+            onPress={() => navigation.navigate("Categories")}>
             <View style={styles.item}>
                 {showAnim && (<Animated.View style={[stylesAnim.hoverItems,
                 { top: AnimPosition.y, left: AnimPosition.x }, { opacity: hoverDropAnimation }, { transform: [{ scale: hoverAnimation }] }]}></Animated.View>)}

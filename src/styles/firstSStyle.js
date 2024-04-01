@@ -5,11 +5,12 @@ import { FONTS } from "../constants/fonts.js";
 export const styles = StyleSheet.create({
     //boxOne
     boxOne: {
+        marginVertical: 25,
+        marginTop: 25 + StatusBar.currentHeight,
+        marginHorizontal: SIZES.margBig,
         flexDirection: "row",
         justifyContent: "space-between",
         alignItems: "center",
-        marginHorizontal: SIZES.margBig,
-        marginVertical: 25,
     },
 
     boxOneText: {
@@ -114,8 +115,6 @@ export const styles = StyleSheet.create({
         overflow: 'hidden',
     },
     container: {
-        marginTop: 4,
         flex: 1,
-        marginTop: StatusBar.currentHeight,
     },
 })

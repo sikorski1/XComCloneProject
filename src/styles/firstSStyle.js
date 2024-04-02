@@ -17,37 +17,6 @@ export const styles = StyleSheet.create({
         fontSize: SIZES.fontBig,
     },
 
-    //boxTwo
-    boxTwo: {
-        justifyContent: "center",
-        alignItems: "center",
-    },
-
-    boxTwoContainer: {
-        paddingVertical: 3,
-        flexDirection: "row",
-        alignItems: "center",
-        width: SIZES.width * 0.9,
-        borderColor: COLORS.borderColor,
-        borderWidth: 1,
-        borderRadius: 15,
-        marginBottom: 16,
-    },
-
-    boxTwoLoupIcon: {
-        marginLeft: 15,
-    },
-
-    boxTwoInput: {
-        marginHorizontal: 5,
-        flex: 1,
-    },
-
-    boxTwoQRIcon: {
-        marginLeft: "auto",
-        marginRight: 15,
-    },
-
     //boxThree
 
     boxThree: {
@@ -78,7 +47,6 @@ export const styles = StyleSheet.create({
 
     boxFour: {
         marginTop: 12,
-        marginLeft: 12,
     },
 
     item: {
@@ -88,7 +56,6 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         marginVertical: 4,
-        marginHorizontal: 4,
         borderRadius: 4,
         padding: 6,
         borderWidth: 1,

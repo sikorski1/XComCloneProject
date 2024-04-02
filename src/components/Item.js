@@ -41,7 +41,7 @@ export const Item = ({ title, imageUri, index, navigation }) =>
                 }, 200)
             }}
             onPress={() => navigation.navigate("Categories")}>
-            <View style={styles.item}>
+            <View style={[styles.item, {marginRight: index == DATA.length-1 ? 12:0, marginLeft: index == 0? 12:6}]}>
                 {showAnim && (<Animated.View style={[stylesAnim.hoverItems,
                 { top: AnimPosition.y, left: AnimPosition.x }, { opacity: hoverDropAnimation }, { transform: [{ scale: hoverAnimation }] }]}></Animated.View>)}
                 <Text numberOfLines={2} ellipsizeMode="tail" style={[styles.title, { color: index == DATA.length - 1 ? "#be0064" : "black" }]}>{title}</Text>

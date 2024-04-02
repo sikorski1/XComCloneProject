@@ -26,7 +26,7 @@ export default function CategoriesFinder({ route, navigation })
             <View style={styles.underline}></View>
             <FlatList
                 data={data.productsList}
-                showsHorizontalScrollIndicator={false}
+                showsVerticalScrollIndicator={false}
                 renderItem={({ item, index }) =>
                 {
                     return (

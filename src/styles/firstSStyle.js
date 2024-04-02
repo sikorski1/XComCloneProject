@@ -6,7 +6,7 @@ export const styles = StyleSheet.create({
     //boxOne
     boxOne: {
         marginVertical: 25,
-        marginTop: 25 + StatusBar.currentHeight,
+        marginTop: 25 + SIZES.statusBarHeight,
         marginHorizontal: SIZES.margBig,
         flexDirection: "row",
         justifyContent: "space-between",

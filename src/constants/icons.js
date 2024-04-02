@@ -1,4 +1,4 @@
-import {COLORS} from "./colors"
+import { COLORS } from "./colors"
 import FontAwesome from "react-native-vector-icons/FontAwesome.js";
 import SimpleLineIcons from "react-native-vector-icons/SimpleLineIcons"
 import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
@@ -12,6 +12,7 @@ export const ICONS = {
     rightArrowIcon: <EvilIcons name={"chevron-right"} size={25}></EvilIcons>,
     rightArrowIconBig: <EvilIcons name={"chevron-right"} size={60}></EvilIcons>,
     leftArrowIconBig: <EvilIcons name={"chevron-left"} size={50}></EvilIcons>,
+    leftArrowIcon: <Entypo name={"chevron-thin-left"} size={25}></Entypo>,
     balanceIcon: <MaterialCommunityIcons name={"scale-unbalanced"} size={20}></MaterialCommunityIcons>,
 
     homeNavIconOutline: <Ionicons name={"home-outline"} size={30} color={COLORS.textColor}></Ionicons>,

@@ -31,7 +31,7 @@ export default function CategoryCard({ data, index })
                         {showAnim && (<Animated.View
                             style={[
                                 stylesAnim.hoverCategoriesFinder,
-                                { top: AnimPosition.y, left: AnimPosition.x, opacity: hoverDropAnimation, 
+                                { top: AnimPosition.y - 30, left: AnimPosition.x - 100, opacity: hoverDropAnimation, 
                                     transform: [{ scale: hoverAnimation}] }
                             ]}
                         />)}

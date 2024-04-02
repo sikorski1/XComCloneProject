@@ -11,6 +11,7 @@ export const ICONS = {
     barcodeIcon: <MaterialCommunityIcons name={"barcode-scan"} size={15}></MaterialCommunityIcons>,
     rightArrowIcon: <EvilIcons name={"chevron-right"} size={25}></EvilIcons>,
     rightArrowIconBig: <EvilIcons name={"chevron-right"} size={60}></EvilIcons>,
+    rightArrowIcon2: <Entypo name={"chevron-thin-right"} size={14}></Entypo>,
     leftArrowIconBig: <EvilIcons name={"chevron-left"} size={50}></EvilIcons>,
     leftArrowIcon: <Entypo name={"chevron-thin-left"} size={25}></Entypo>,
     balanceIcon: <MaterialCommunityIcons name={"scale-unbalanced"} size={20}></MaterialCommunityIcons>,

@@ -1,11 +1,11 @@
 import { Animated, Easing } from "react-native"
-export const animationHoverHandle = (event, setAnimPosition, setShowAnim, hoverAnimation, duration) =>
+export const animationHoverHandle = (event, setAnimPosition, setShowAnim, hoverAnimation, duration, toValue) =>
 {
     const { locationX, locationY } = event.nativeEvent
     setAnimPosition({ x: Math.floor(locationX), y: Math.floor(locationY) })
     setShowAnim(true)
     Animated.timing(hoverAnimation, {
-        toValue: 7.5,
+        toValue: toValue,
         duration: duration,
         delay:100,
         easing: Easing.bezier(1, 1, 0.3, 0.2),

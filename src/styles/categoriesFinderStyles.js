@@ -17,7 +17,7 @@ export const styles = StyleSheet.create({
     },
 
     arrowIcon: {
-        marginRight:"auto"
+        marginRight: SIZES.width * 0.08
     },
 
     headerText: {
@@ -27,5 +27,55 @@ export const styles = StyleSheet.create({
 
     balanceIcon: {
         marginLeft: "auto"
+    },
+
+    underline: {
+        width: "100%",
+        height: 1,
+        backgroundColor: COLORS.borderColor
+    },
+
+    cardBox: {
+        paddingHorizontal: SIZES.width * 0.05,
+        paddingVertical: 15,
+        flexDirection: "row",
+        alignItems: "center",
+        overflow: "hidden"
+    },
+
+    cardImgBox: {
+        marginRight: SIZES.width * 0.05,
+        width: 30,
+        height: 30
+    },
+
+    cardImg: {
+        width: "100%",
+        height: "100%"
+    },
+
+    cardText: {
+        fontWeight: "300"
+    },
+
+    cardIcon: {
+        marginLeft: "auto"
+    },
+
+    cardUnderline: {
+        width: "90%",
+        height: 1,
+        alignSelf: "center",
+        backgroundColor: COLORS.borderColor
+    },
+
+    animationLayer: {
+        position: "absolute",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        zIndex: 1
     }
+
 })

@@ -8,6 +8,7 @@ import
     Animated
 } from 'react-native';
 import { DATA } from '../data/DATA';
+import {dataCategoryFinder} from "../data/categoriesFinderData"
 import { styles } from '../styles/firstSStyle'
 import { useState, useRef } from 'react';
 import { animationHoverHandle } from "../animations/animationHoverHandle";
@@ -27,9 +28,10 @@ export const Item = ({ title, imageUri, index, navigation }) =>
     const [showAnim, setShowAnim] = useState(false);
     const hoverAnimation = useRef(new Animated.Value(1)).current
     const hoverDropAnimation = useRef(new Animated.Value(1)).current;
+    const dataCategory = dataCategoryFinder[index];
     return (
         <TouchableWithoutFeedback
-            onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 180)}
+            onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 180, 7.5)}
             onPressOut={() =>
             {
                 animationHoverDropHandle(hoverDropAnimation);
@@ -40,7 +42,7 @@ export const Item = ({ title, imageUri, index, navigation }) =>
                     hoverDropAnimation.setValue(1)
                 }, 200)
             }}
-            onPress={() => navigation.navigate("Categories")}>
+            onPress={() => navigation.navigate("Categories", dataCategory)}>
             <View style={[styles.item, {marginRight: index == DATA.length-1 ? 12:0, marginLeft: index == 0? 12:6}]}>
                 {showAnim && (<Animated.View style={[stylesAnim.hoverItems,
                 { top: AnimPosition.y, left: AnimPosition.x }, { opacity: hoverDropAnimation }, { transform: [{ scale: hoverAnimation }] }]}></Animated.View>)}

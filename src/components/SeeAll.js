@@ -15,7 +15,7 @@ export default function SeeAll({ text, navigation })
         <>
             <View style={styles.underline}></View>
             <TouchableWithoutFeedback
-                onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 230)} onPressOut={() =>
+                onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 230, 7.5)} onPressOut={() =>
                 {
                     animationHoverDropHandle(hoverDropAnimation);
                     setTimeout(() =>
@@ -25,7 +25,8 @@ export default function SeeAll({ text, navigation })
                         hoverDropAnimation.setValue(1)
                     }, 200)
                 }}
-                onPress={() => navigation.navigate("Categories")}>
+                // onPress={() => navigation.navigate("Categories")}
+                >
                 <View style={styles.textBox}>
                     {showAnim && (<Animated.View style={[stylesAnim.hoverSeeAll, { top: AnimPosition.y, left: AnimPosition.x }, { opacity: hoverDropAnimation }, { transform: [{ scale: hoverAnimation }] }]}></Animated.View>)}
                     <Text style={styles.text}>{text}</Text>

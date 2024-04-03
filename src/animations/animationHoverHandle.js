@@ -26,16 +26,16 @@ export const animationHoverDropHandle = (hoverDrop) =>
 }
 
 export const AnimComponent =
-    ({ animPosition, setAnimPosition, showAnim, setShowAnim, hoverAnimation, duration, toValue, hoverDropAnimation, styles, shiftX, shiftY }) => (
-            <View style={[stylesAnim.animationLayer]}>
-                {showAnim && (<Animated.View
-                    style={[
-                        styles,
-                        {
-                            top: animPosition.y - shiftY, left: animPosition.x - shiftX, opacity: hoverDropAnimation,
-                            transform: [{ scale: hoverAnimation }],
-                        }
-                    ]}
-                />)}
-            </View>
+    ({ animPosition, showAnim, hoverAnimation, hoverDropAnimation, styles, shiftX, shiftY }) => (
+        <View style={[stylesAnim.animationLayer]}>
+            {showAnim && (<Animated.View
+                style={[
+                    styles,
+                    {
+                        top: animPosition.y - shiftY, left: animPosition.x - shiftX, opacity: hoverDropAnimation,
+                        transform: [{ scale: hoverAnimation }],
+                    }
+                ]}
+            />)}
+        </View>
     )

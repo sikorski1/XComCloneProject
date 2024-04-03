@@ -1,4 +1,6 @@
 import { StyleSheet } from "react-native"
+
+const itemRadius = 25;
 export const stylesAnim = StyleSheet.create({
 
     animationLayer: {
@@ -21,10 +23,10 @@ export const stylesAnim = StyleSheet.create({
 
     hoverItems: {
         position: "absolute",
+        width: itemRadius*2,
+        height: itemRadius*2,
+        borderRadius: itemRadius,
         backgroundColor: "rgba(0, 0, 0, 0.05)",
-        width: "53%",
-        height: "47%",
-        borderRadius: 30,
         zIndex: 100,
         pointerEvents: "none"
     },

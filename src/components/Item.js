@@ -6,7 +6,6 @@ import
     Image,
     TouchableWithoutFeedback,
     Animated,
-    Pressable
 } from 'react-native';
 import { useState, useRef } from 'react';
 import { DATA } from '../data/DATA';
@@ -34,7 +33,7 @@ export const Item = ({ title, imageUri, index, navigation }) =>
     return (
         <TouchableWithoutFeedback
             onPress={() => navigation.navigate("Categories", dataCategory)}
-            onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 200, 5)}
+            onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 200, 6)}
             onPressOut={() =>
             {
                 animationHoverDropHandle(hoverDropAnimation)
@@ -47,16 +46,12 @@ export const Item = ({ title, imageUri, index, navigation }) =>
             <View style={[styles.item, { marginRight: index == DATA.length - 1 ? 12 : 0, marginLeft: index == 0 ? 12 : 6 }]}>
                 <AnimComponent
                     animPosition={animPosition}
-                    setAnimPosition={setAnimPosition}
                     showAnim={showAnim}
-                    setShowAnim={setShowAnim}
                     hoverAnimation={hoverAnimation}
-                    duration={280}
-                    toValue={7.5}
                     hoverDropAnimation={hoverDropAnimation}
                     styles={stylesAnim.hoverItems}
-                    shiftX={0}
-                    shiftY={0}
+                    shiftX={25}
+                    shiftY={25}
                 />
                 <Text numberOfLines={2} ellipsizeMode="tail" style={[styles.title, { color: index == DATA.length - 1 ? "#be0064" : "black" }]}>{title}</Text>
                 <Image source={imageUri} style={styles.image} />

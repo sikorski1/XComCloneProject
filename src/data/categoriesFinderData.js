@@ -134,12 +134,12 @@ export const dataCategoryFinder = [
         productsList: [
             {
                 id: 1,
-                name: "Podzespoły do gier",
+                name: "Akcesoria GSM",
                 img: require("../../assets/pictures/category finder pictures/icon.png")
             },
             {
                 id: 2,
-                name: "Podzespoły do gier",
+                name: "Akcesoria do laptopów",
                 img: require("../../assets/pictures/category finder pictures/icon.png")
             },
             {

@@ -7,7 +7,7 @@ export const stylesAnim = StyleSheet.create({
         left: 0,
         right: 0,
         bottom: 0,
-        zIndex: 1
+        zIndex: 1,
     },
 
     hoverSeeAll: {
@@ -25,7 +25,8 @@ export const stylesAnim = StyleSheet.create({
         width: "53%",
         height: "47%",
         borderRadius: 30,
-        zIndex: 100
+        zIndex: 100,
+        pointerEvents: "none"
     },
 
     hoverHotShot: {
@@ -41,7 +42,7 @@ export const stylesAnim = StyleSheet.create({
         position: "absolute",
         backgroundColor: "rgba(0, 0, 0, 0.1)",
         width: "45%",
-        height: "45%",
+        height: "90%",
         borderRadius: 50,
         zIndex: 100
     },

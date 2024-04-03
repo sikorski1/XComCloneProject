@@ -26,29 +26,16 @@ export const animationHoverDropHandle = (hoverDrop) =>
 }
 
 export const AnimComponent =
-    ({ animPosition, setAnimPosition, showAnim, setShowAnim, hoverAnimation, duration, toValue, hoverDropAnimation, styles }) => (
-        <TouchableWithoutFeedback
-            onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, duration, toValue)}
-            onPressOut={() =>
-            {
-                animationHoverDropHandle(hoverDropAnimation)
-                setTimeout(() =>
-                {
-                    setShowAnim(false)
-                    hoverDropAnimation.setValue(1)
-                }, 200)
-            }}>
-            <View style={stylesAnim.animationLayer}>
-                {console.log(styles)}
+    ({ animPosition, setAnimPosition, showAnim, setShowAnim, hoverAnimation, duration, toValue, hoverDropAnimation, styles, shiftX, shiftY }) => (
+            <View style={[stylesAnim.animationLayer]}>
                 {showAnim && (<Animated.View
                     style={[
                         styles,
                         {
-                            top: animPosition.y - 30, left: animPosition.x - 70, opacity: hoverDropAnimation,
-                            transform: [{ scale: hoverAnimation }]
+                            top: animPosition.y - shiftY, left: animPosition.x - shiftX, opacity: hoverDropAnimation,
+                            transform: [{ scale: hoverAnimation }],
                         }
                     ]}
                 />)}
             </View>
-        </TouchableWithoutFeedback>
     )

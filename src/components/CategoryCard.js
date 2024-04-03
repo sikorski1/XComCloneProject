@@ -23,7 +23,9 @@ export default function CategoryCard({ data, index })
                 duration={200}
                 toValue={4}
                 hoverDropAnimation={hoverDropAnimation}
-                styles = {stylesAnim.hoverCategoriesFinder}/>
+                styles = {stylesAnim.hoverCategoriesFinder}
+                shiftX={0}
+                shiftY={0}/>               
                 <View style={styles.cardImgBox}>
                     <Image style={styles.cardImg} source={itemData.img} />
                 </View>

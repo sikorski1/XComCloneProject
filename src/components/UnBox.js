@@ -1,31 +1,30 @@
 import { View, Text, Image, Animated, TouchableWithoutFeedback } from "react-native";
 import { useState, useRef } from "react";
+import { AnimComponent } from "../animations/animationHoverHandle.js"
 import { styles } from "../styles/unBoxStyle";
 import { stylesAnim } from "../styles/animationHoverStyle";
 import { ICONS } from "../constants/icons";
-import { animationHoverHandle } from "../animations/animationHoverHandle";
-import { animationHoverDropHandle } from "../animations/animationHoverDropHandle"
 
 export default function UnBox()
 {
-    const [AnimPosition, setAnimPosition] = useState({ x: 0, y: 0 });
+    const [animPosition, setAnimPosition] = useState({ x: 0, y: 0 });
     const [showAnim, setShowAnim] = useState(false);
     const hoverAnimation = useRef(new Animated.Value(1)).current
     const hoverDropAnimation = useRef(new Animated.Value(1)).current;
     return (
-        <TouchableWithoutFeedback onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 230, 7.5)} onPressOut={() =>
-        {
-            animationHoverDropHandle(hoverDropAnimation);
-            setTimeout(() =>
-            {
-                hoverAnimation.setValue(0)
-                setShowAnim(false)
-                hoverDropAnimation.setValue(1)
-            }, 200)
-        }}>
             <View style={styles.box}>
-                {showAnim && (<Animated.View style={[stylesAnim.hoverUnBox,
-                { top: AnimPosition.y, left: AnimPosition.x }, { opacity: hoverDropAnimation }, { transform: [{ scale: hoverAnimation }] }]}></Animated.View>)}
+                <AnimComponent
+                animPosition={animPosition}
+                setAnimPosition={setAnimPosition}
+                showAnim={showAnim}
+                setShowAnim={setShowAnim}
+                hoverAnimation={hoverAnimation}
+                duration={200}
+                toValue={5}
+                hoverDropAnimation={hoverDropAnimation}
+                styles={stylesAnim.hoverUnBox}
+                shiftX = {0}
+                shiftY = {0} />
                 <View style={styles.boxImgContainer}><Image style={styles.boxImg} source={require("../../assets/pictures/magic-box.png")} /></View>
                 <View style={styles.boxMain}>
                     <View style={styles.boxMainAddon}>
@@ -38,6 +37,5 @@ export default function UnBox()
                     <Text style={styles.boxArrowIcon}>{ICONS.rightArrowIconBig}</Text>
                 </View>
             </View>
-        </TouchableWithoutFeedback>
     )
 }

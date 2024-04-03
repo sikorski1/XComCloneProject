@@ -13,7 +13,7 @@ export default function UnBox()
     const hoverAnimation = useRef(new Animated.Value(1)).current
     const hoverDropAnimation = useRef(new Animated.Value(1)).current;
     return (
-        <TouchableWithoutFeedback onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 230)} onPressOut={() =>
+        <TouchableWithoutFeedback onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 230, 7.5)} onPressOut={() =>
         {
             animationHoverDropHandle(hoverDropAnimation);
             setTimeout(() =>

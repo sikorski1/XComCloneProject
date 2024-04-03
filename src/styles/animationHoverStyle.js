@@ -1,5 +1,15 @@
 import { StyleSheet } from "react-native"
 export const stylesAnim = StyleSheet.create({
+
+    animationLayer: {
+        position: "absolute",
+        top: 0,
+        left: 0,
+        right: 0,
+        bottom: 0,
+        zIndex: 1
+    },
+
     hoverSeeAll: {
         position: "absolute",
         backgroundColor: "rgba(0, 0, 0, 0.1)",

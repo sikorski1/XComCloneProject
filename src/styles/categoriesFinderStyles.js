@@ -10,7 +10,7 @@ export const styles = StyleSheet.create({
 
     headerBox: {
         marginTop: SIZES.statusBarHeight + SIZES.margBig / 2,
-        marginHorizontal: SIZES.width * 0.05,
+        marginHorizontal: SIZES.width * 0.04,
         marginBottom: SIZES.margBig,
         flexDirection: "row",
         alignItems: "center",
@@ -19,7 +19,6 @@ export const styles = StyleSheet.create({
     arrowIcon: {
         marginRight: SIZES.width * 0.08,
         padding:3,
-        
     },
 
     headerText: {
@@ -28,7 +27,8 @@ export const styles = StyleSheet.create({
     },
 
     balanceIcon: {
-        marginLeft: "auto"
+        marginLeft: "auto",
+        padding:3,
     },
 
     underline: {

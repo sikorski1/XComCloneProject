@@ -9,10 +9,6 @@ import Finder from "./Finder";
 import CategoryCard from "./CategoryCard.js";
 export default function CategoriesFinder({ route, navigation })
 {
-    const [AnimPosition, setAnimPosition] = useState({ x: 0, y: 0 });
-    const [showAnim, setShowAnim] = useState(false);
-    const hoverAnimation = useRef(new Animated.Value(1)).current
-    const hoverDropAnimation = useRef(new Animated.Value(1)).current;
     const data = route.params
     const dataProductsList = route.params.productsList
     return (

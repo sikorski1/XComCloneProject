@@ -13,8 +13,7 @@ import { dataCategoryFinder } from "../data/categoriesFinderData"
 import { styles } from '../styles/firstSStyle'
 import { AnimComponent } from "../animations/animationHoverHandle.js"
 import { stylesAnim } from "../styles/animationHoverStyle"
-import { animationHoverHandle } from '../animations/animationHoverHandle.js';
-import { animationHoverDropHandle } from '../animations/animationHoverHandle.js';
+import { animationHoverHandle, animationHoverDropHandle } from '../animations/animationHoverHandle.js';
 export const getItem = (data, index) => ({
     id: data[index].id,
     title: data[index].title,

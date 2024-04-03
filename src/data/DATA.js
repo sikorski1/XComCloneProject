@@ -1,36 +1,36 @@
 export const DATA = [
     {
-        id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
+        id: 0,
         title: 'Smartfony',
         image: require('../../assets/pictures/smartphone.jpg'),
     },
     {
-        id: '3ac68afc-c605-48d3-a4f8-fbd91aa97f63',
+        id: 1,
         title: 'Laptopy',
         image: require('../../assets/pictures/laptop.jpg'),
     },
     {
-        id: '58694a0f-3da1-471f-bd96-145571e29d72',
+        id: 2,
         title: 'Akcesoria',
         image: require('../../assets/pictures/accesories.jpg'),
     },
     {
-        id: '58694a0f-3da1-bd96-145571e29d72',
+        id: 3,
         title: 'Podzespoły komputerowe',
         image: require('../../assets/pictures/gpu.jpg'),
     },
     {
-        id: '58694a0f-3da1-471-145571e29d72',
+        id: 4,
         title: 'TV i audio',
         image: require('../../assets/pictures/tv.jpg'),
     },
     {
-        id: '58694a0f-3da1-471f',
+        id: 5,
         title: 'Gaming',
         image: require('../../assets/pictures/gaming.jpg'),
     },
     {
-        id:"6",
+        id:6,
         title:"Promocje",
         image: require("../../assets/pictures/discount.png")
     }

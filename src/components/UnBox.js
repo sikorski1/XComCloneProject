@@ -1,31 +1,37 @@
 import { View, Text, Image, Animated, TouchableWithoutFeedback } from "react-native";
 import { useState, useRef } from "react";
+import { AnimComponent } from "../animations/animationHoverHandle.js"
 import { styles } from "../styles/unBoxStyle";
 import { stylesAnim } from "../styles/animationHoverStyle";
 import { ICONS } from "../constants/icons";
-import { animationHoverHandle } from "../animations/animationHoverHandle";
-import { animationHoverDropHandle } from "../animations/animationHoverDropHandle"
-
+import { animationHoverHandle, animationHoverDropHandle } from '../animations/animationHoverHandle.js';
 export default function UnBox()
 {
-    const [AnimPosition, setAnimPosition] = useState({ x: 0, y: 0 });
+    const [animPosition, setAnimPosition] = useState({ x: 0, y: 0 });
     const [showAnim, setShowAnim] = useState(false);
     const hoverAnimation = useRef(new Animated.Value(1)).current
     const hoverDropAnimation = useRef(new Animated.Value(1)).current;
     return (
-        <TouchableWithoutFeedback onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 230)} onPressOut={() =>
-        {
-            animationHoverDropHandle(hoverDropAnimation);
-            setTimeout(() =>
+        <TouchableWithoutFeedback
+            onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 280, 6)}
+            onPressOut={() =>
             {
-                hoverAnimation.setValue(0)
-                setShowAnim(false)
-                hoverDropAnimation.setValue(1)
-            }, 200)
-        }}>
+                animationHoverDropHandle(hoverDropAnimation)
+                setTimeout(() =>
+                {
+                    setShowAnim(false)
+                    hoverDropAnimation.setValue(1)
+                }, 200)
+            }}>
             <View style={styles.box}>
-                {showAnim && (<Animated.View style={[stylesAnim.hoverUnBox,
-                { top: AnimPosition.y, left: AnimPosition.x }, { opacity: hoverDropAnimation }, { transform: [{ scale: hoverAnimation }] }]}></Animated.View>)}
+                <AnimComponent
+                    animPosition={animPosition}
+                    showAnim={showAnim}
+                    hoverAnimation={hoverAnimation}
+                    hoverDropAnimation={hoverDropAnimation}
+                    styles={stylesAnim.hoverUnBox}
+                    shiftX={90}
+                    shiftY={60} />
                 <View style={styles.boxImgContainer}><Image style={styles.boxImg} source={require("../../assets/pictures/magic-box.png")} /></View>
                 <View style={styles.boxMain}>
                     <View style={styles.boxMainAddon}>

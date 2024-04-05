@@ -18,7 +18,7 @@ export const styles = StyleSheet.create({
 
     arrowIcon: {
         marginRight: SIZES.width * 0.08,
-        padding:3,
+        padding: 3,
     },
 
     headerText: {

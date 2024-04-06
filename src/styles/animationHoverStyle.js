@@ -4,7 +4,8 @@ const itemRadius = 25;
 const seeAllRadius = 25;
 const categoriesCardRadius = 20;
 const hotShotRadius = 50;
-const unBoxRadius = 30;
+const unBoxRadius = 30
+const productListRadius = 30
 export const stylesAnim = StyleSheet.create({
 
     animationLayer: {
@@ -19,7 +20,7 @@ export const stylesAnim = StyleSheet.create({
     hoverSeeAll: {
         position: "absolute",
         backgroundColor: "rgba(0, 0, 0, 0.1)",
-        width: seeAllRadius*4,
+        width: seeAllRadius * 4,
         height: seeAllRadius,
         borderRadius: seeAllRadius,
         zIndex: 100
@@ -38,18 +39,18 @@ export const stylesAnim = StyleSheet.create({
     hoverHotShot: {
         position: "absolute",
         backgroundColor: "rgba(0, 0, 0, 0.1)",
-        width: hotShotRadius*4,
-        height: hotShotRadius*4,
-        borderRadius: hotShotRadius*2,
+        width: hotShotRadius * 4,
+        height: hotShotRadius * 4,
+        borderRadius: hotShotRadius * 2,
         zIndex: 100
     },
 
     hoverUnBox: {
         position: "absolute",
         backgroundColor: "rgba(0, 0, 0, 0.1)",
-        width: unBoxRadius*6,
-        height: unBoxRadius*4,
-        borderRadius:unBoxRadius*2,
+        width: unBoxRadius * 6,
+        height: unBoxRadius * 4,
+        borderRadius: unBoxRadius * 2,
         zIndex: 100
     },
 
@@ -67,6 +68,15 @@ export const stylesAnim = StyleSheet.create({
         width: categoriesCardRadius * 8,
         height: categoriesCardRadius,
         borderRadius: categoriesCardRadius,
+        backgroundColor: "rgba(0, 0, 0, 0.1)",
+        zIndex: 100
+    },
+
+    hoverProductList: {
+        position: "absolute",
+        width: productListRadius*6,
+        height: productListRadius*2,
+        borderRadius: productListRadius*2,
         backgroundColor: "rgba(0, 0, 0, 0.1)",
         zIndex: 100
     }

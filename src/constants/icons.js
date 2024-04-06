@@ -8,6 +8,7 @@ import Entypo from "react-native-vector-icons/Entypo"
 export const ICONS = {
     bellIcon: <FontAwesome name={"bell-o"} size={18}></FontAwesome>,
     magnifierIcon: <SimpleLineIcons name={"magnifier"}></SimpleLineIcons>,
+    magnifierIconBig: <SimpleLineIcons name={"magnifier"} size={16}></SimpleLineIcons>,
     barcodeIcon: <MaterialCommunityIcons name={"barcode-scan"} size={15}></MaterialCommunityIcons>,
     rightArrowIcon: <EvilIcons name={"chevron-right"} size={25}></EvilIcons>,
     rightArrowIconBig: <EvilIcons name={"chevron-right"} size={60}></EvilIcons>,

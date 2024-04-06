@@ -4,6 +4,7 @@ import { ICONS } from "../constants/icons.js"
 import { COLORS } from "../constants/colors.js"
 import { styles } from "../styles/firstSStyle.js"
 import { DATA } from "../data/DATA.js"
+import { dataCategoryFinder } from "../data/categoriesFinderData"
 import { useFonts } from 'expo-font';
 import * as SplashScreen from 'expo-splash-screen';
 import { Item, getItem, getItemCount } from "../components/Item.js"
@@ -56,7 +57,7 @@ export default function MainPage({ navigation })
                     </View>
                     <Finder />
                     <BannerList />
-                    <SeeAll text="Wszystkie promocje" navigation={navigation} />
+                    <SeeAll text="Wszystkie promocje" navigation={navigation} data={dataCategoryFinder[0]} />
                 </Container>
                 <Container>
                     <View style={styles.boxFour}>
@@ -71,7 +72,7 @@ export default function MainPage({ navigation })
                             initialNumToRender={4}
                         />
                     </View>
-                    <SeeAll text="Wszystkie kategorie" navigation={navigation} />
+                    <SeeAll text="Wszystkie kategorie" navigation={navigation} data={dataCategoryFinder[0]} />
                 </Container>
                 <Container>
                     <HotShot />

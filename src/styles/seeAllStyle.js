@@ -14,7 +14,7 @@ export const styles = StyleSheet.create({
     },
 
     textBox: {
-        paddingVertical: SIZES.margBig / 2 + 3,
+        paddingVertical: SIZES.margBig / 2 + 5,
         paddingHorizontal: SIZES.width * 0.05,
         flexDirection: "row",
         alignItems: "center",

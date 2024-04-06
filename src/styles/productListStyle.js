@@ -22,19 +22,71 @@ export const styles = StyleSheet.create({
 
     balanceIcon: {
         marginLeft: "auto",
-        padding:3,
+        padding: 3,
     },
 
     magnifierIcon: {
-        marginHorizontal: SIZES.margBig/2,
+        marginHorizontal: SIZES.margBig / 2,
         padding: 3,
     },
 
     headerTitle: {
-        width:SIZES.width*0.55,
+        width: SIZES.width * 0.55,
         fontSize: SIZES.fontBig,
         fontWeight: "bold"
     },
 
+    sectionText: {
+        marginVertical: SIZES.margBig / 2,
+        alignSelf: "center"
 
+    },
+
+    productCard: {
+        flexDirection: "row",
+        paddingHorizontal: SIZES.width * 0.04,
+        paddingVertical: SIZES.width * 0.03,
+        overflow: "hidden"
+    },
+
+    imgBox: {
+        width: 100,
+        height: 120,
+        marginRight: SIZES.margBig
+    },
+
+    productImg: {
+        width: "100%",
+        height: "100%",
+        resizeMode: "contain"
+    },
+
+    infoBox: {
+        marginBottom: SIZES.margBig + 7
+    },
+
+    cardTitle: {
+        marginBottom: SIZES.margBig / 2,
+        width: SIZES.width*0.45,
+        fontSize: SIZES.fontBig - 5,
+
+    },
+
+    productInfo: {
+        width: SIZES.width*0.45,
+        fontWeight: "300",
+        fontSize: SIZES.fontBig/2 + 2
+    },
+
+    productPrice: {
+        alignSelf: "flex-end",
+        marginLeft: "auto"
+    },
+
+    underline: {
+        alignSelf: "center",
+        width: SIZES.width*0.9,
+        height: 1,
+        backgroundColor: COLORS.borderColor
+    }
 })

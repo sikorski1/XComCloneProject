@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import MainPage from "../pages/MainPage"
 import CategoriesFinder from "../components/CategoriesFinder";
 import ProductList from "../components/ProductList";
+import Product from "../components/Product";
 const Stack = createNativeStackNavigator();
 export default function StackNavigator()
 {
@@ -14,10 +15,16 @@ export default function StackNavigator()
                     { animation: "fade_from_bottom" }
                 }>
             </Stack.Screen>
-            <Stack.Screen name="Product" component={ProductList}
+            <Stack.Screen name="ProductList" component={ProductList}
                 options={
                     { animation: "fade" }
                 }>
+            </Stack.Screen>
+            <Stack.Screen name="Product" component={Product}
+                options={
+                    { animation: "fade" }
+                }>
+
             </Stack.Screen>
         </Stack.Navigator>
     )

@@ -2,8 +2,8 @@ import { ICONS } from "../constants/icons.js"
 import { NavigationContainer } from "@react-navigation/native"
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 import { styles } from "../styles/tabNavigationStyle.js"
-import StackNavigator from "../navigators/StackNavigator.js";
-import SearchPage from "../pages/SearchPage.js"
+import StackMainNavigator from "./StackMainNavigator.js";
+import StackSearchNavigator from "./StackSearchNavigator.js";
 import ShopListPage from "../pages/ShopListPage.js"
 import BasketPage from "../pages/BasketPage.js"
 import SignUpPage from "../pages/SignUpPage.js"
@@ -20,7 +20,7 @@ export default function TabNavigator() {
                 }}>
                 <Tab.Screen
                     name="StackMainPage"
-                    component={StackNavigator}
+                    component={StackMainNavigator}
                     options={{
                         tabBarIcon: ({ focused }) =>
                             focused ? ICONS.homeNavIconSharp : ICONS.homeNavIconOutline
@@ -28,8 +28,8 @@ export default function TabNavigator() {
                 >
                 </Tab.Screen>
                 <Tab.Screen
-                    name="SearchPage"
-                    component={SearchPage}
+                    name="StackSearchPage"
+                    component={StackSearchNavigator}
                     options={{
                         tabBarIcon: ({ focused }) => (
                             focused ? ICONS.searchNavIconSharp : ICONS.searchNavIconOutline

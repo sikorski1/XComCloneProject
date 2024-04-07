@@ -5,7 +5,8 @@ import { useState, useRef } from "react";
 import { ICONS } from "../constants/icons";
 import { AnimComponent } from "../animations/animationHoverHandle.js"
 import { animationHoverHandle, animationHoverDropHandle } from '../animations/animationHoverHandle.js';
-export default function SeeAll({ text, navigation, data })
+import { dataCategoryFinder } from "../data/categoriesFinderData.js";
+export default function SeeAll({ text, navigation})
 {
     const [animPosition, setAnimPosition] = useState({ x: 0, y: 0 });
     const [showAnim, setShowAnim] = useState(false);
@@ -15,7 +16,7 @@ export default function SeeAll({ text, navigation, data })
         <>
             <View style={styles.underline}></View>
             <TouchableWithoutFeedback
-            onPress={() => navigation.navigate("Categories", data)}
+            onPress={() => navigation.navigate("Categories", dataCategoryFinder)}
                 onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 230, 8.5)} onPressOut={() =>
                 {
                     animationHoverDropHandle(hoverDropAnimation);

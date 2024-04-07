@@ -6,7 +6,7 @@ import { stylesAnim } from "../styles/animationHoverStyle.js";
 import { AnimComponent } from "../animations/animationHoverHandle.js"
 import { animationHoverHandle, animationHoverDropHandle } from '../animations/animationHoverHandle.js';
 
-export default function SearchCard({ data, index }) {
+export default function SearchCard({ data, index, navigation }) {
     const [animPosition, setAnimPosition] = useState({ x: 0, y: 0 });
     const [showAnim, setShowAnim] = useState(false);
     const hoverAnimation = useRef(new Animated.Value(1)).current
@@ -15,6 +15,7 @@ export default function SearchCard({ data, index }) {
     return (
         <>
             <TouchableWithoutFeedback
+                onPress={() => navigation.navigate("Product")}
                 onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 200, 6)}
                 onPressOut={() => {
                     animationHoverDropHandle(hoverDropAnimation)

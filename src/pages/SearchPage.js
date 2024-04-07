@@ -1,13 +1,14 @@
 import { View, Text, TextInput, FlatList, SafeAreaView, Image } from "react-native"
 import { useState } from "react"
 import { ICONS } from "../constants/icons.js"
+import { COLORS } from "../constants/colors.js"
 import { styles } from "../styles/firstSStyle.js"
 import { productSearch } from "../data/productSearch.js";
 import filter from "lodash.filter";
 import Container from "../components/Container.js";
 import SearchCard from "../components/SearchCard.js";
 
-export default function SearchPage() {
+export default function SearchPage({navigation}) {
     const [searchQuery, setSearchQuery] = useState('');
     const [data, setData] = useState(productSearch);
 
@@ -28,7 +29,7 @@ export default function SearchPage() {
 
 
     return (
-        <SafeAreaView style={styles.container}>
+        <SafeAreaView style={[styles.container, {backgroundColor:COLORS.containerColor}]}>
             <Container>
                 <View style={styles.box}>
                     <View style={styles.boxContainer}>
@@ -46,7 +47,7 @@ export default function SearchPage() {
             <FlatList
                 data={data}
                 renderItem={({ item, index }) => (
-                    <SearchCard key={item.id} data={data} index={index}></SearchCard>
+                    <SearchCard key={item.id} data={data} index={index} navigation={navigation}></SearchCard>
                 )}
             />
         </SafeAreaView>

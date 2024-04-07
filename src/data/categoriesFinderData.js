@@ -2722,5 +2722,5 @@ export const dataCategoryFinder = [
                 ]
             },
         ]
-    },
+    }
 ]

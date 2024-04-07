@@ -4,12 +4,14 @@ import { ICONS } from "../constants/icons.js"
 import { styles } from "../styles/finderStyle.js"
 import { useNavigation } from "@react-navigation/native";
 
-export default function Finder() {
+export default function Finder()
+{
     const [text, setText] = useState('');
     const navigation = useNavigation();
 
-    const handlePressIn = () => {
-        navigation.navigate("SearchPage");
+    const handlePressIn = () =>
+    {
+        navigation.navigate("Search");
     };
 
     return (
@@ -22,7 +24,8 @@ export default function Finder() {
                             placeholder="Czego szukasz?"
                             onChangeText={setText}
                             value={text}
-                            onPressIn={() => navigation.navigate("SearchPage")}
+                            showSoftInputOnFocus={false}
+                            onPressIn={() => navigation.navigate("Search")}
                         />
                     </TouchableWithoutFeedback>
                     <Text style={styles.boxQRIcon}>{ICONS.barcodeIcon}</Text>

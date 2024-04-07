@@ -8,6 +8,10 @@ export const styles = StyleSheet.create({
         backgroundColor: COLORS.containerColor
     },
 
+    textBox: {
+        marginRight: 80,
+    },
+
     headerBox: {
         marginTop: SIZES.statusBarHeight + SIZES.margBig / 2,
         marginHorizontal: SIZES.width * 0.04,
@@ -28,7 +32,7 @@ export const styles = StyleSheet.create({
 
     balanceIcon: {
         marginLeft: "auto",
-        padding:3,
+        padding: 3,
     },
 
     underline: {

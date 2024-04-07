@@ -5,8 +5,8 @@ import CategoriesFinder from "../components/CategoriesFinder";
 import ProductList from "../components/ProductList";
 import Product from "../components/Product";
 const Stack = createNativeStackNavigator();
-export default function StackNavigator()
-{
+
+export default function StackNavigator() {
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName="Main">
             <Stack.Screen name="Main" component={MainPage}></Stack.Screen>

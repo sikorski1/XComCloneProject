@@ -3,8 +3,8 @@ import { ICONS } from "../constants/icons";
 import { styles } from "../styles/categoriesFinderStyles"
 import Finder from "./Finder";
 import CategoryCard from "./CategoryCard.js";
-export default function CategoriesFinder({ route, navigation })
-{
+
+export default function CategoriesFinder({ route, navigation }) {
     const data = route.params
     const dataProductsList = route.params.productsList
     return (
@@ -19,8 +19,7 @@ export default function CategoriesFinder({ route, navigation })
             <FlatList
                 data={data.productsList}
                 showsVerticalScrollIndicator={false}
-                renderItem={({ item, index }) =>
-                {
+                renderItem={({ item, index }) => {
                     return (
                         <CategoryCard key={item.id} data={dataProductsList} index={index} navigation={navigation}></CategoryCard>
                     )

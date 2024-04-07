@@ -3,7 +3,37 @@ import { COLORS } from "../constants/colors.js";
 import { SIZES } from "../constants/sizes.js";
 import { FONTS } from "../constants/fonts.js";
 export const styles = StyleSheet.create({
+
+    box: {
+        justifyContent: "center",
+        alignItems: "center",
+        marginTop: 64,
+    },
     //boxOne
+    boxContainer: {
+        paddingVertical: 3,
+        flexDirection: "row",
+        alignItems: "center",
+        width: SIZES.width * 0.9,
+        borderColor: COLORS.borderColor,
+        borderWidth: 1,
+        borderRadius: 15,
+        marginBottom: 16,
+    },
+
+    boxLoupIcon: {
+        marginLeft: 15,
+    },
+
+    boxInput: {
+        marginHorizontal: 5,
+        flex: 1,
+    },
+
+    boxQRIcon: {
+        marginLeft: "auto",
+        marginRight: 15,
+    },
     boxOne: {
         marginVertical: 25,
         marginTop: 25 + SIZES.statusBarHeight,
@@ -20,7 +50,7 @@ export const styles = StyleSheet.create({
     //boxThree
 
     boxThree: {
-        marginTop: 25,
+        marginTop: 2,
     },
 
     boxThreeImgContainer: {

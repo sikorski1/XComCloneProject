@@ -7,8 +7,7 @@ import SearchPage from "../pages/SearchPage.js"
 import ShopListPage from "../pages/ShopListPage.js"
 import BasketPage from "../pages/BasketPage.js"
 import SignUpPage from "../pages/SignUpPage.js"
-export default function TabNavigator()
-{
+export default function TabNavigator() {
     const Tab = createBottomTabNavigator();
     return (
         <NavigationContainer>
@@ -19,7 +18,7 @@ export default function TabNavigator()
                     tabBarShowLabel: false,
                     tabBarStyle: styles.tabNav,
                 }}>
-                <Tab.Screen 
+                <Tab.Screen
                     name="StackMainPage"
                     component={StackNavigator}
                     options={{

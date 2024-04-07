@@ -3,10 +3,9 @@ import { useState, useRef } from "react";
 import { styles } from "../styles/productListStyle";
 import { stylesAnim } from "../styles/animationHoverStyle";
 import { animationHoverHandle, animationHoverDropHandle, AnimComponent } from "../animations/animationHoverHandle";
-import { ICONS } from "../constants/icons";
 
-export default function ProductListCard({ data, navigation })
-{
+
+export default function ProductListCard({ data, navigation }) {
     const [animPosition, setAnimPosition] = useState({ x: 0, y: 0 });
     const [showAnim, setShowAnim] = useState(false);
     const hoverAnimation = useRef(new Animated.Value(1)).current
@@ -16,11 +15,9 @@ export default function ProductListCard({ data, navigation })
             <TouchableWithoutFeedback
                 onPress={() => navigation.navigate("Product")}
                 onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 200, 5.6)}
-                onPressOut={() =>
-                {
+                onPressOut={() => {
                     animationHoverDropHandle(hoverDropAnimation)
-                    setTimeout(() =>
-                    {
+                    setTimeout(() => {
                         setShowAnim(false)
                         hoverDropAnimation.setValue(1)
                     }, 200)

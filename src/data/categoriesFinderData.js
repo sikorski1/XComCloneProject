@@ -2,6 +2,7 @@ export const dataCategoryFinder = [
     {
         id: 1,
         name: "Smartfony",
+        img: require("../../assets/pictures/smartphone.jpg"),
         productsList: [
             {
                 id: 1,
@@ -411,6 +412,7 @@ export const dataCategoryFinder = [
     {
         id: 2,
         name: "Laptopy",
+        img: require("../../assets/pictures/laptop.jpg"),
         productsList: [
             {
                 id: 1,
@@ -866,6 +868,7 @@ export const dataCategoryFinder = [
     {
         id: 3,
         name: "Akcesoria",
+        img: require("../../assets/pictures/accesories.jpg"),
         productsList: [
             {
                 id: 1,
@@ -1055,6 +1058,7 @@ export const dataCategoryFinder = [
     {
         id: 4,
         name: "Podzespoły komputerowe",
+        img: require("../../assets/pictures/gpu.jpg"),
         productsList: [
             {
                 id: 1,
@@ -1473,6 +1477,7 @@ export const dataCategoryFinder = [
     {
         id: 5,
         name: "TV i audio",
+        img: require("../../assets/pictures/tv.jpg"),
         productsList: [
             {
                 id: 1,
@@ -1662,6 +1667,7 @@ export const dataCategoryFinder = [
     {
         id: 6,
         name: "Gaming",
+        img: require("../../assets/pictures/gaming.jpg"),
         productsList: [
             {
                 id: 1,
@@ -2426,6 +2432,7 @@ export const dataCategoryFinder = [
     {
         id: 7,
         name: "Promocje",
+        img: require("../../assets/pictures/discount.png"),
         productsList: [
             {
                 id: 1,

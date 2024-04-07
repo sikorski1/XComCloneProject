@@ -15,7 +15,7 @@ export default function CategoryCard({ data, index, navigation, condition })
     return (
         <>
             <TouchableWithoutFeedback
-                onPress={() => navigation.navigate(condition ? "ProductList": "Categories", data[index])}
+                onPress={() => navigation.navigate(condition ? "ProductList" : "Categories", data[index])}
                 onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 200, 6)}
                 onPressOut={() =>
                 {
@@ -37,10 +37,16 @@ export default function CategoryCard({ data, index, navigation, condition })
                         styles={stylesAnim.hoverCategoriesFinder}
                         shiftX={60}
                         shiftY={10} />
-                    {condition &&
+                    {condition ?
                         (<View style={styles.cardImgBox}>
                             <Image style={styles.cardImg} source={{ uri: itemData.img }} />
-                        </View>)}
+                        </View>)
+                        :
+                        (<View style={styles.cardImgBox}>
+                            <Image style={styles.cardImg} source={itemData.img} />
+                        </View>
+                        )
+                    }
                     <Text style={styles.cardText}>{itemData.name}</Text>
                     <Text style={styles.cardIcon}>{ICONS.rightArrowIcon2}</Text>
                 </View>

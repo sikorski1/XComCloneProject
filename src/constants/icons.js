@@ -17,6 +17,11 @@ export const ICONS = {
     leftArrowIcon: <Entypo name={"chevron-thin-left"} size={25}></Entypo>,
     balanceIcon: <MaterialCommunityIcons name={"scale-unbalanced"} size={20}></MaterialCommunityIcons>,
 
+    shareIcon: <MaterialCommunityIcons name={"share"} size={30}></MaterialCommunityIcons>,
+    checkIcon: <Ionicons name={"checkmark-circle-outline"} size={30}></Ionicons>,
+    truckIcon: <MaterialCommunityIcons name={"truck-outline"} size={30}></MaterialCommunityIcons>,
+    storeIcon: <Ionicons name={"storefront-outline"} size={30}></Ionicons>,
+
     homeNavIconOutline: <Ionicons name={"home-outline"} size={30} color={COLORS.textColor}></Ionicons>,
     homeNavIconSharp: <Ionicons name={"home-sharp"} size={30} color={COLORS.blueHover}></Ionicons>,
     searchNavIconOutline: <Ionicons name={"search-outline"} size={30} color={COLORS.black}></Ionicons>,

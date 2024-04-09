@@ -18,13 +18,15 @@ export default function Timer()
         const seconds = Math.floor((difference % (1000 * 60)) / 1000);
         return [hours, minutes, seconds]
     }
-    useEffect(() =>
-    {
-        const timer = setInterval(() =>
-        {
+    useEffect(() => {
+        const updateRemainingTime = () => {
             setRemainingTime(calculateRemainingTime());
-        }, 1000);
-        return () => clearInterval(timer);
+            setTimeout(updateRemainingTime, 1000);
+        };
+    
+        const timer = setTimeout(updateRemainingTime, 1000);
+    
+        return () => clearTimeout(timer);
     }, []);
 
     return (

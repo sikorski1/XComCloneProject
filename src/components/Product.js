@@ -1,7 +1,9 @@
-import { View, Text, Image, TouchableHighlight } from "react-native";
+import { View, Text, Image, TouchableHighlight, ScrollView, TouchableWithoutFeedback } from "react-native";
 import { ICONS } from "../constants/icons";
-export default function Product({navigation})
+import { styles } from "../styles/productStyle"
+export default function Product({ route, navigation })
 {
+    const data = route.params
     const infoData = [
         {
             id: 1,
@@ -21,34 +23,45 @@ export default function Product({navigation})
             title: "Dostępny w salonach",
             more: "Wybierz salon"
         }]
+    
     return (
-        <View>
-            <View>
-                <Text onPress={() => navigation.goBack()}>{ICONS.leftArrowIcon}</Text>
-                <Text>{ICONS.shareIcon}</Text>
+        <ScrollView style={styles.box}
+            showsVerticalScrollIndicator={false}>
+            <View style={styles.headerIconBox}>
+                <TouchableWithoutFeedback onPress={() => navigation.goBack()}>
+                    <View style={styles.arrowIcon}>{ICONS.leftArrowIcon}</View>
+                </TouchableWithoutFeedback>
+                <TouchableWithoutFeedback style={styles.shareIcon}>
+                    <View style={styles.shareIcon}>{ICONS.shareIcon}</View>
+                </TouchableWithoutFeedback>
             </View>
-            <View>
-                <Image />
-            </View>
-            <View>
-                <Text>Samsung galaxy pro 123</Text>
-                <Text>21,37 zł</Text>
-                <TouchableHighlight>
-                    <View>
-                        <Text></Text>
-                    </View>
-                </TouchableHighlight>
-                <TouchableHighlight>
-                    <View>
-                        <Text></Text>
-                    </View>
-                </TouchableHighlight>
-                <TouchableHighlight>
-                    <View>
-                        <Text></Text>
-                    </View>
-                </TouchableHighlight>
-                <View>
+            <View style={styles.contentBox}>
+                <View style={styles.imgBox}>
+                    <Image style={styles.img} source={{uri: data.img}} />
+                </View>
+                <Text style={styles.productName}>{data.name}</Text>
+                <Text style={styles.productPrice}>{data.price}</Text>
+                <View style={styles.btnSection}>
+                    <TouchableHighlight>
+                        <View style={styles.btn}>
+                            <Text>{ICONS.balanceProductIcon}</Text>
+                            <Text style={styles.textBtn}>Do porównania</Text>
+                        </View>
+                    </TouchableHighlight>
+                    <TouchableHighlight>
+                        <View style={styles.btn}>
+                            <Text >{ICONS.heartIcon}</Text>
+                            <Text style={styles.textBtn}>Do listy</Text>
+                        </View>
+                    </TouchableHighlight>
+                    <TouchableHighlight>
+                        <View style={[styles.btn, styles.basketBtn]}>
+                            <Text>{ICONS.basketIcon}</Text>
+                            <Text style={[styles.textBtn, styles.textLastBtn]}>Do koszyka</Text>
+                        </View>
+                    </TouchableHighlight>
+                </View>
+                <View style={styles.infoSection}>
                     {infoData.map((item, index) => (
                         <View key={item.id}>
                             <Text>{item.icon}</Text>
@@ -57,10 +70,10 @@ export default function Product({navigation})
                                 <Text>{item.more}</Text>
                             </View>
                             <Text>{ICONS.rightArrowIcon2}</Text>
-                        </View>   
+                        </View>
                     ))}
                 </View>
             </View>
-        </View>
+        </ScrollView>
     )
 }

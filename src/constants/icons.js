@@ -21,6 +21,9 @@ export const ICONS = {
     checkIcon: <Ionicons name={"checkmark-circle-outline"} size={30}></Ionicons>,
     truckIcon: <MaterialCommunityIcons name={"truck-outline"} size={30}></MaterialCommunityIcons>,
     storeIcon: <Ionicons name={"storefront-outline"} size={30}></Ionicons>,
+    heartIcon: <Ionicons name={"heart-outline"} size={25} color={COLORS.black}></Ionicons>,
+    basketIcon: <Ionicons name={"cart-outline"} size={25} color={COLORS.containerColor}></Ionicons>,
+    balanceProductIcon: <MaterialCommunityIcons name={"scale-unbalanced"} size={25}></MaterialCommunityIcons>,
 
     homeNavIconOutline: <Ionicons name={"home-outline"} size={30} color={COLORS.textColor}></Ionicons>,
     homeNavIconSharp: <Ionicons name={"home-sharp"} size={30} color={COLORS.blueHover}></Ionicons>,

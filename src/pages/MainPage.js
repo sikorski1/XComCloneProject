@@ -74,7 +74,7 @@ export default function MainPage({ navigation })
                     <SeeAll text="Wszystkie kategorie" navigation={navigation} data={dataCategoryFinder}/>
                 </Container>
                 <Container>
-                    <HotShot />
+                    <HotShot navigation={navigation}/>
                 </Container>
                 <Container>
                     <UnBox></UnBox>

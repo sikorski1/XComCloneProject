@@ -28,12 +28,12 @@
 	},
 	{
 		"id": "4",
-		"name": "Nothing Phone (2a) 5G 12/256GB Black 120Hz",
-		"price": "1449,00 zł",
-		"fromPrice": "1679,00 zł",
-		"amount": "200",
-		"sold": "179",
-		"img": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2024/3/pr_2024_3_1_11_29_50_969_04.jpg"
+		"name": "AMD Ryzen 7 7800X3D",
+		"price": "1389,00 zł",
+		"fromPrice": "1649,00 zł",
+		"amount": "150",
+		"sold": "105",
+		"img": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2023/2/pr_2023_2_28_10_12_13_142_00.jpg"
 	},
 	{
 		"id": "5",
@@ -44,13 +44,14 @@
 		"sold": "96",
 		"img": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2022/11/pr_2022_11_16_8_42_3_823_03.jpg"
 	},
+
 	{
 		"id": "6",
-		"name": "AMD Ryzen 7 7800X3D",
-		"price": "1389,00 zł",
-		"fromPrice": "1649,00 zł",
-		"amount": "150",
-		"sold": "105",
-		"img": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2023/2/pr_2023_2_28_10_12_13_142_00.jpg"
+		"name": "Nothing Phone (2a) 5G 12/256GB Black 120Hz",
+		"price": "1449,00 zł",
+		"fromPrice": "1679,00 zł",
+		"amount": "200",
+		"sold": "179",
+		"img": "https://cdn.x-kom.pl/i/setup/images/prod/big/product-new-big,,2024/3/pr_2024_3_1_11_29_50_969_04.jpg"
 	}
 ]

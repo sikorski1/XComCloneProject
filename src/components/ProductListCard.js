@@ -13,7 +13,7 @@ export default function ProductListCard({ data, navigation }) {
     return (
         <>
             <TouchableWithoutFeedback
-                onPress={() => navigation.navigate("Product")}
+                onPress={() => navigation.navigate("Product", data)}
                 onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 200, 5.6)}
                 onPressOut={() => {
                     animationHoverDropHandle(hoverDropAnimation)

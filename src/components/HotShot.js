@@ -7,7 +7,7 @@ import Timer from "./Timer.js";
 import hotShotdata from "../data/hotShotData.json";
 import { AnimComponent } from "../animations/animationHoverHandle.js"
 import { animationHoverHandle, animationHoverDropHandle } from '../animations/animationHoverHandle.js';
-export default function HotShot()
+export default function HotShot({navigation})
 {
     const today = new Date().getDate();
     const todayData = hotShotdata[today % hotShotdata.length];
@@ -18,6 +18,7 @@ export default function HotShot()
     const save = todayData.fromPrice.substring(0, todayData.fromPrice.indexOf(" ")).replace(",", ".") - todayData.price.substring(0, todayData.price.indexOf(" ")).replace(",", ".")
     return (
         <TouchableWithoutFeedback
+            onPress={() => navigation.navigate("Product", todayData)}
             onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 280, 7.5)}
             onPressOut={() =>
             {

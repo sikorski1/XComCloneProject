@@ -90,8 +90,7 @@ const styles = StyleSheet.create({
     text: {
         fontSize: 24,
         textAlign: 'center',
-        marginTop: 16,
-        underline: 'false'
+        marginTop: 16
     },
     input: {
         fontSize: 16,

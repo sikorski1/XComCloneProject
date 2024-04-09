@@ -8,5 +8,6 @@ export const COLORS = {
     specialRed:"#be0064",
     shadowLight: "rgba(0, 0, 0, 0.3)",
     purpleUnBox: "#8a64d7",
-    blueHover: "#0082fa"
+    blueHover: "#0082fa",
+    green: "#119e00"
 }

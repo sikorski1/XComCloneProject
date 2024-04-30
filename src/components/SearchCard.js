@@ -16,7 +16,7 @@ export default function SearchCard({ data, index, navigation }) {
         <>
             <TouchableWithoutFeedback
                 onPress={() => navigation.navigate("Product", data[index])}
-                onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 200, 6)}
+                onPressIn={(event) => animationHoverHandle(event, setAnimPosition, setShowAnim, hoverAnimation, 200, 6.5)}
                 onPressOut={() => {
                     animationHoverDropHandle(hoverDropAnimation)
                     setTimeout(() => {

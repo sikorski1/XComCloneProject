@@ -44,7 +44,7 @@ export const styles = StyleSheet.create({
     },
 
     imgBox: {
-        justifyContent:"center",
+        justifyContent: "center",
         width: SIZES.width,
         height: SIZES.height * 0.5,
     },
@@ -63,12 +63,13 @@ export const styles = StyleSheet.create({
 
     productPrice: {
         marginBottom: SIZES.margBig / 2,
-        fontSize: SIZES.fontBig-5,
+        fontSize: SIZES.fontBig - 5,
         fontWeight: "bold"
     },
 
     btnSection: {
-        flexDirection:"row",
+        marginBottom: SIZES.margBig/2,
+        flexDirection: "row",
         flexWrap: "wrap",
         justifyContent: "center"
     },
@@ -76,9 +77,9 @@ export const styles = StyleSheet.create({
     btn: {
         paddingHorizontal: 10,
         paddingVertical: 5,
-        marginHorizontal:5,
-        marginBottom:SIZES.margBig / 2,
-        width: SIZES.width*0.4,
+        marginHorizontal: 5,
+        marginBottom: SIZES.margBig / 2,
+        width: SIZES.width * 0.4,
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
@@ -87,7 +88,7 @@ export const styles = StyleSheet.create({
     },
 
     basketBtn: {
-        width: SIZES.width*0.8 + 10,
+        width: SIZES.width * 0.8 + 10,
         paddingHorizontal: 14,
         paddingVertical: 7,
         color: COLORS.containerColor,
@@ -99,7 +100,16 @@ export const styles = StyleSheet.create({
     },
 
     textLastBtn: {
-        fontSize: SIZES.fontBig-3,
+        fontSize: SIZES.fontBig - 3,
         color: COLORS.containerColor
+    },
+
+    infoSection: {
+        marginBottom: SIZES.margBig/2
+    },
+
+    infoElem: {
+        flexDirection: "row",
+        borderLeftWidth: 2
     }
 })

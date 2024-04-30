@@ -63,7 +63,7 @@ export default function Product({ route, navigation })
                 </View>
                 <View style={styles.infoSection}>
                     {infoData.map((item, index) => (
-                        <View key={item.id}>
+                        <View key={item.id} style={styles.infoElem}>
                             <Text>{item.icon}</Text>
                             <View>
                                 <Text>{item.title}</Text>

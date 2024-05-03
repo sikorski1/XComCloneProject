@@ -1,4 +1,4 @@
-import { View, Text, Image, TouchableHighlight, ScrollView, TouchableWithoutFeedback } from "react-native";
+import { View, Text, Image, Pressable, ScrollView, TouchableWithoutFeedback } from "react-native";
 import { ICONS } from "../constants/icons";
 import { styles } from "../styles/productStyle"
 import { COLORS } from "../constants/colors";
@@ -44,24 +44,30 @@ export default function Product({ route, navigation })
                 <Text style={styles.productName}>{data.name}</Text>
                 <Text style={styles.productPrice}>{data.price}</Text>
                 <View style={styles.btnSection}>
-                    <TouchableHighlight>
+                    <Pressable style={({ pressed }) => [{
+                        backgroundColor: pressed ? COLORS.shadowVeryLight : "transparent",
+                    }, styles.btnPressable]}>
                         <View style={styles.btn}>
                             <Text>{ICONS.balanceProductIcon}</Text>
                             <Text style={styles.textBtn}>Do porównania</Text>
                         </View>
-                    </TouchableHighlight>
-                    <TouchableHighlight>
+                    </Pressable>
+                    <Pressable style={({ pressed }) => [{
+                        backgroundColor: pressed ? COLORS.shadowVeryLight : "transparent",
+                    }, styles.btnPressable]}>
                         <View style={styles.btn}>
                             <Text >{ICONS.heartIcon}</Text>
                             <Text style={styles.textBtn}>Do listy</Text>
                         </View>
-                    </TouchableHighlight>
-                    <TouchableHighlight>
+                    </Pressable>
+                    <Pressable style={({ pressed }) => [{
+                        backgroundColor: pressed ? COLORS.black : "transparent",
+                    }, styles.btnPressable]}>
                         <View style={[styles.btn, styles.basketBtn]}>
                             <Text>{ICONS.basketIcon}</Text>
                             <Text style={[styles.textBtn, styles.textLastBtn]}>Do koszyka</Text>
                         </View>
-                    </TouchableHighlight>
+                    </Pressable>
                 </View>
                 <View style={styles.infoSection}>
                     {infoData.map((item, index) => (
@@ -71,6 +77,6 @@ export default function Product({ route, navigation })
                     ))}
                 </View>
             </View>
-        </ScrollView>
+        </ScrollView >
     )
 }

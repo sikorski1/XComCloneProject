@@ -48,7 +48,7 @@ export default function ProductInfoCard({item, index})
                     </View>
                 </View>
             </TouchableWithoutFeedback>
-            <View style={styles.underline}></View>
+            {index === 2 ? null : <View style={styles.underline}></View>}
         </>
     )
 }

@@ -74,11 +74,15 @@ export const styles = StyleSheet.create({
         justifyContent: "center"
     },
 
+    btnPressable: {
+        marginHorizontal: 5,
+        marginBottom: 10,
+        borderRadius: 18,
+    },
+
     btn: {
         paddingHorizontal: 10,
         paddingVertical: 5,
-        marginHorizontal: 5,
-        marginBottom: SIZES.margBig / 2,
         width: SIZES.width * 0.4,
         flexDirection: "row",
         justifyContent: "center",

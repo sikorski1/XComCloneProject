@@ -105,11 +105,41 @@ export const styles = StyleSheet.create({
     },
 
     infoSection: {
-        marginBottom: SIZES.margBig/2
+        marginBottom: SIZES.margBig/2,
+        borderRadius: 8,
+        backgroundColor: COLORS.containerColor,
+        elevation: 1,
     },
 
     infoElem: {
         flexDirection: "row",
-        borderLeftWidth: 2
+        alignItems:"center",
+        overflow: "hidden"
+    },
+
+    infoBox: {
+        width: "100%"
+    },
+
+    infoIcon: {
+        marginHorizontal: SIZES.margBig-5,
+        marginVertical: SIZES.margBig-10
+    },
+
+    infoMore: {
+        fontSize: SIZES.fontSmall+2,
+        color: COLORS.textColor
+    },
+
+    infoArrow: {
+        marginLeft: "auto",
+        marginHorizontal: SIZES.margBig-5,
+    },
+
+    underline: {
+        width: "83%",
+        height: 1,
+        alignSelf: "flex-end",
+        backgroundColor: COLORS.shadowVeryLight
     }
 })

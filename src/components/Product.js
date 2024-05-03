@@ -1,6 +1,8 @@
 import { View, Text, Image, TouchableHighlight, ScrollView, TouchableWithoutFeedback } from "react-native";
 import { ICONS } from "../constants/icons";
 import { styles } from "../styles/productStyle"
+import { COLORS } from "../constants/colors";
+import ProductInfoCard from "./ProductInfoCard";
 export default function Product({ route, navigation })
 {
     const data = route.params
@@ -23,7 +25,7 @@ export default function Product({ route, navigation })
             title: "Dostępny w salonach",
             more: "Wybierz salon"
         }]
-    
+
     return (
         <ScrollView style={styles.box}
             showsVerticalScrollIndicator={false}>
@@ -37,7 +39,7 @@ export default function Product({ route, navigation })
             </View>
             <View style={styles.contentBox}>
                 <View style={styles.imgBox}>
-                    <Image style={styles.img} source={{uri: data.img}} />
+                    <Image style={styles.img} source={{ uri: data.img }} />
                 </View>
                 <Text style={styles.productName}>{data.name}</Text>
                 <Text style={styles.productPrice}>{data.price}</Text>
@@ -63,13 +65,8 @@ export default function Product({ route, navigation })
                 </View>
                 <View style={styles.infoSection}>
                     {infoData.map((item, index) => (
-                        <View key={item.id} style={styles.infoElem}>
-                            <Text>{item.icon}</Text>
-                            <View>
-                                <Text>{item.title}</Text>
-                                <Text>{item.more}</Text>
-                            </View>
-                            <Text>{ICONS.rightArrowIcon2}</Text>
+                        <View key={item.id}>
+                            <ProductInfoCard item={item} index={index}></ProductInfoCard>
                         </View>
                     ))}
                 </View>

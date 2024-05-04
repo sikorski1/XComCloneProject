@@ -1,4 +1,4 @@
-import { View, Text, TextInput, FlatList, SafeAreaView, Image } from "react-native"
+import { View, Text, TextInput, FlatList, SafeAreaView, Pressable } from "react-native"
 import { useState } from "react"
 import { ICONS } from "../constants/icons.js"
 import { COLORS } from "../constants/colors.js"
@@ -8,20 +8,24 @@ import filter from "lodash.filter";
 import Container from "../components/Container.js";
 import SearchCard from "../components/SearchCard.js";
 
-export default function SearchPage({navigation}) {
+export default function SearchPage({ navigation })
+{
     const [searchQuery, setSearchQuery] = useState('');
     const [data, setData] = useState(productSearch);
 
-    const handleSearch = (query) => {
+    const handleSearch = (query) =>
+    {
         setSearchQuery(query);
         const formattedQuerry = query.toLowerCase();
-        const filteredData = filter(productSearch, (item) => {
+        const filteredData = filter(productSearch, (item) =>
+        {
             return contains(item, formattedQuerry);
         });
         setData(filteredData);
     };
 
-    const contains = (item, query) => {
+    const contains = (item, query) =>
+    {
         const { name } = item;
         if (name.toLowerCase().includes(query)) { return true; }
         return false
@@ -29,8 +33,8 @@ export default function SearchPage({navigation}) {
 
 
     return (
-        <SafeAreaView style={[styles.container, {backgroundColor:COLORS.containerColor}]}>
-            <Container>
+        <SafeAreaView style={[styles.container, { backgroundColor: COLORS.containerColor }]}>
+            <Container style={{marginBottom: 0}}>
                 <View style={styles.box}>
                     <View style={styles.boxContainer}>
                         <Text style={styles.boxLoupIcon}>{ICONS.magnifierIcon}</Text>
@@ -39,7 +43,11 @@ export default function SearchPage({navigation}) {
                             value={searchQuery}
                             onChangeText={(query) => handleSearch(query)}
                         />
-                        <Text style={styles.boxQRIcon}>{ICONS.barcodeIcon}</Text>
+                        <View style={styles.boxQRIcon}>
+                            <Pressable android_ripple={{ color: COLORS.shadowVeryLight, radius: 15, borderless: true }}>
+                                {ICONS.barcodeIcon}
+                            </Pressable>
+                        </View>
                     </View>
                 </View>
             </Container>

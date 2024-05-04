@@ -1,8 +1,9 @@
-import { View, Text, TextInput, TouchableWithoutFeedback } from "react-native"
+import { View, Text, TextInput, TouchableWithoutFeedback, Pressable } from "react-native"
 import { useState } from "react"
 import { ICONS } from "../constants/icons.js"
 import { styles } from "../styles/finderStyle.js"
 import { useNavigation } from "@react-navigation/native";
+import { COLORS } from "../constants/colors.js";
 
 export default function Finder()
 {
@@ -28,7 +29,11 @@ export default function Finder()
                             onPressIn={() => navigation.navigate("Search")}
                         />
                     </TouchableWithoutFeedback>
-                    <Text style={styles.boxQRIcon}>{ICONS.barcodeIcon}</Text>
+                    <View style={styles.boxQRIcon}>
+                        <Pressable android_ripple={{ color: COLORS.shadowVeryLight, radius: 15, borderless: true }}>
+                            {ICONS.barcodeIcon}
+                        </Pressable>
+                    </View>
                 </View>
             </View>
         </>

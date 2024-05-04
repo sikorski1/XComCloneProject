@@ -1,4 +1,5 @@
-import { View, Text, FlatList, Image } from "react-native"
+import { View, Text, FlatList, Pressable } from "react-native"
+import { COLORS } from "../constants/colors";
 import { ICONS } from "../constants/icons"
 import { styles } from "../styles/productListStyle";
 import ProductListCard from "./ProductListCard";
@@ -10,10 +11,25 @@ export default function ProductList({ route, navigation })
     return (
         <View style={styles.box}>
             <View style={styles.headerBox}>
-                <Text onPress={() => navigation.goBack()} style={styles.arrowIcon}>{ICONS.leftArrowIcon}</Text>
+                <View onPress={() => navigation.goBack()} style={styles.arrowIcon}>
+                    <Pressable onPress={() => navigation.goBack()} android_ripple={{ color: COLORS.shadowVeryLight, radius: 25, borderless: true }}
+                        style={{ padding: 12 }}>
+                        {ICONS.leftArrowIcon}
+                    </Pressable>
+                </View>
                 <Text numberOfLines={1} style={styles.headerTitle}>{sectionTitle}</Text>
-                <Text style={styles.magnifierIcon}>{ICONS.magnifierIconBig}</Text>
-                <Text style={styles.balanceIcon}>{ICONS.balanceIcon}</Text>
+                <View style={styles.magnifierIcon}>
+                    <Pressable android_ripple={{ color: COLORS.shadowVeryLight, radius: 18, borderless: true }}
+                    style={{ padding: 9 }}>
+                        {ICONS.magnifierIconBig}
+                    </Pressable>
+                </View>
+                <View style={styles.balanceIcon}>
+                    <Pressable android_ripple={{ color: COLORS.shadowVeryLight, radius: 18, borderless: true }}
+                    style={{ padding: 9 }}>
+                        {ICONS.balanceIcon}
+                    </Pressable>
+                </View>
             </View>
             <Text style={styles.sectionText}>Wyszukaliśmy {productsData.length} {productsText}</Text>
             <View style={styles.underline}></View>

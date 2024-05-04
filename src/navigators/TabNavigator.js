@@ -34,7 +34,7 @@ export default function TabNavigator()
                                 <Pressable
                                     android_ripple={{ color: COLORS.shadowVeryLight, radius: 45, borderless: true }}
                                     style={{ paddingHorizontal: 20, paddingVertical: 10 }}
-                                    onPress={() => navigation.navigate("StackMainPage")}>
+                                    onPress={() => navigation.navigate("Main")}>
                                     {ICONS.homeNavIconOutline}
                                 </Pressable>
                     })}

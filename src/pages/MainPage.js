@@ -1,6 +1,7 @@
-import { React, useCallback, useState, useEffect } from "react"
-import { View, Text, SafeAreaView, VirtualizedList, ScrollView, StatusBar } from "react-native"
+import { React, useCallback } from "react"
+import { View, Text, SafeAreaView, VirtualizedList, ScrollView, StatusBar, Pressable } from "react-native"
 import { ICONS } from "../constants/icons.js"
+import { COLORS } from "../constants/colors.js"
 import { styles } from "../styles/firstSStyle.js"
 import { DATA } from "../data/DATA.js"
 import { dataCategoryFinder } from "../data/categoriesFinderData.js"
@@ -47,16 +48,20 @@ export default function MainPage({ navigation })
     //setting NavBarColor on Android
     return (
         <SafeAreaView style={styles.container} onLayout={onLayoutRootView}>
-            <StatusBar translucent backgroundColor="transparent" barStyle={"dark-content"}/>
+            <StatusBar translucent backgroundColor="transparent" barStyle={"dark-content"} />
             <ScrollView>
                 <Container onLayout={onLayoutRootView}>
                     <View style={styles.boxOne}>
                         <Text style={styles.boxOneText}>{4 <= getCurrentTimeInPoland() && getCurrentTimeInPoland() <= 18 ? "Dzień dobry" : "Dobry wieczór"}</Text>
-                        <Text>{ICONS.bellIcon}</Text>
+                        <View>
+                            <Pressable android_ripple={{ color: COLORS.shadowVeryLight, radius: 18, borderless: true }}>
+                                {ICONS.bellIcon}
+                            </Pressable>
+                        </View>
                     </View>
                     <Finder />
                     <BannerList />
-                    <SeeAll text="Wszystkie promocje" navigation={navigation} data={dataCategoryFinder[dataCategoryFinder.length-1]}/>
+                    <SeeAll text="Wszystkie promocje" navigation={navigation} data={dataCategoryFinder[dataCategoryFinder.length - 1]} />
                 </Container>
                 <Container>
                     <View style={styles.boxFour}>
@@ -71,10 +76,10 @@ export default function MainPage({ navigation })
                             initialNumToRender={4}
                         />
                     </View>
-                    <SeeAll text="Wszystkie kategorie" navigation={navigation} data={dataCategoryFinder}/>
+                    <SeeAll text="Wszystkie kategorie" navigation={navigation} data={dataCategoryFinder} />
                 </Container>
                 <Container>
-                    <HotShot navigation={navigation}/>
+                    <HotShot navigation={navigation} />
                 </Container>
                 <Container>
                     <UnBox></UnBox>

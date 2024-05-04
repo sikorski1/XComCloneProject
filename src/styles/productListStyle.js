@@ -10,24 +10,22 @@ export const styles = StyleSheet.create({
     headerBox: {
         marginTop: SIZES.statusBarHeight + SIZES.margBig / 2,
         marginHorizontal: SIZES.width * 0.04,
-        marginBottom: SIZES.margBig,
+        marginBottom: SIZES.margBig-5,
         flexDirection: "row",
         alignItems: "center",
     },
 
     arrowIcon: {
+        marginLeft:-SIZES.width*0.015,
         marginRight: SIZES.width * 0.08,
-        padding: 3,
     },
 
     balanceIcon: {
         marginLeft: "auto",
-        padding: 3,
     },
 
     magnifierIcon: {
-        marginHorizontal: SIZES.margBig / 2,
-        padding: 3,
+        marginHorizontal: -5,
     },
 
     headerTitle: {

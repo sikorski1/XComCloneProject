@@ -1,11 +1,11 @@
 import { View, StyleSheet } from "react-native";
 import { COLORS } from "../constants/colors.js";
 
-export default function Container({ children })
+export default function Container({ children, style })
 {
     return (
 
-        <View style={styles.container}>
+        <View style={[styles.container, style]}>
             <View style={styles.underline}></View>
             {children}
             {/* musi byc prop, tresc wsadzona do kontenera bedzie w tym miejscu */}

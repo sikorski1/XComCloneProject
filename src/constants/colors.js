@@ -10,5 +10,6 @@ export const COLORS = {
     shadowVeryLight: "rgba(0, 0, 0, 0.1)",
     purpleUnBox: "#8a64d7",
     blueHover: "#0082fa",
-    green: "#119e00"
+    green: "#119e00",
+    darkGreen: "#117e00"
 }

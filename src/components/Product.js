@@ -46,6 +46,7 @@ export default function Product({ route, navigation })
                 <View style={styles.btnSection}>
                     <Pressable style={({ pressed }) => [{
                         backgroundColor: pressed ? COLORS.shadowVeryLight : "transparent",
+                        transform: pressed ? [{scale:0.98}]: [{scale:1}]
                     }, styles.btnPressable]}>
                         <View style={styles.btn}>
                             <Text>{ICONS.balanceProductIcon}</Text>
@@ -54,6 +55,7 @@ export default function Product({ route, navigation })
                     </Pressable>
                     <Pressable style={({ pressed }) => [{
                         backgroundColor: pressed ? COLORS.shadowVeryLight : "transparent",
+                        transform: pressed ? [{scale:0.98}]: [{scale:1}]
                     }, styles.btnPressable]}>
                         <View style={styles.btn}>
                             <Text >{ICONS.heartIcon}</Text>
@@ -61,7 +63,8 @@ export default function Product({ route, navigation })
                         </View>
                     </Pressable>
                     <Pressable style={({ pressed }) => [{
-                        backgroundColor: pressed ? COLORS.black : "transparent",
+                        backgroundColor: pressed ? COLORS.darkGreen : COLORS.green,
+                        transform: pressed ? [{scale:0.98}]: [{scale:1}]
                     }, styles.btnPressable]}>
                         <View style={[styles.btn, styles.basketBtn]}>
                             <Text>{ICONS.basketIcon}</Text>

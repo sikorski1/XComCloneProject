@@ -96,7 +96,6 @@ export const styles = StyleSheet.create({
         paddingHorizontal: 14,
         paddingVertical: 7,
         color: COLORS.containerColor,
-        backgroundColor: COLORS.green
     },
 
     textBtn: {
